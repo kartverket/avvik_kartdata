@@ -1,25 +1,61 @@
 // Start of UML-model
-=== Pakke: «ApplicationSchema» Kartkontroll 1.0 utkast
-*Definisjon:* Datamodell for tilbakemelding på avvik funnet ved kontroll av kartdata i Geovekst kartleggingsprosjekter
+=== Pakke: «ApplicationSchema» Kartkontroll 1.0
+*Definisjon:* Datamodell for tilbakemelding på avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet. Benyttes i Geovekst/FKB kartleggingsprosjekter.
  
 [discrete]
 ==== Profilparametre i tagged values
 [cols="20,80"]
 |===
+|description
+|"Describes deviations from map control" @en
+ 
+|designation
+|"Product spesification Kartkontroll 1.0" @en
+ 
+|language
+|no
+ 
+|SOSI_kortnavn
+|Kartkontroll
+ 
+|SOSI_langnavn
+|Kartkontroll
+ 
 |SOSI_modellstatus
 |utkastOgSkjult
+ 
+|SOSI_spesifikasjonstype
+|produktspesifikasjon
+ 
+|SOSI_versjon
+|5.0
+ 
+|targetNamespace
+|http://skjema.geonorge.no/SOSI/produktspesifikasjon/Kartkontroll/1.0
+ 
+|version
+|1.0
+ 
+|xmlns
+|app
+ 
+|xsdDocument
+|Kartkontroll.xsd
+ 
+|xsdEncodingRule
+|sosi
  
 |===
  
 '''
  
-.Hoveddiagram 
-image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagram med navn Hoveddiagram som viser UML-klasser beskrevet i teksten nedenfor."]
+.Oversiktsdiagram 
+image::diagrammer/Oversiktsdiagram.png[link=diagrammer/Oversiktsdiagram.png, alt="Diagram med navn Oversiktsdiagram som viser UML-klasser beskrevet i teksten nedenfor."]
  
 '''
  
-.Objekttyper 
-image::diagrammer/Objekttyper.png[link=diagrammer/Objekttyper.png, alt="Diagram med navn Objekttyper som viser UML-klasser beskrevet i teksten nedenfor."]
+.Hoveddiagram 
+image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagram med navn Hoveddiagram som viser UML-klasser beskrevet i teksten nedenfor."]
  
 '''
  
@@ -94,7 +130,7 @@ SOSI_navn: PÅVISNING +
 |*avvikshåndtering*
  
 |Definisjon: 
-|hvordan avviket skal håndteres. Det vil i de fleste tilfeller si hvem som har ansvar for å retter avviket.
+|hvordan avviket skal håndteres. Det vil i de fleste tilfeller si hvem som har ansvar for å rette avviket.
  
 |Multiplisitet: 
 |[1..1]
@@ -103,6 +139,9 @@ SOSI_navn: PÅVISNING +
 |<<avvikshåndtering,«CodeList» Avvikshåndtering>>
 |Profilparametre i tagged values: 
 |
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikshandtering + 
+SOSI_datatype: T + 
+SOSI_lengde: 30 + 
 SOSI_navn: AVVIKSHÅNDTERING + 
 |===
 [cols="20,80"]
@@ -191,10 +230,10 @@ SOSI_navn: INFORMASJON +
 [cols="20,80"]
 |===
 |Subtyper:
-|<<avvikegenskapsnøyaktighet,«FeatureType» AvvikEgenskapsnøyaktighet>> +
+|<<avvikegenskapskvalitet,«FeatureType» AvvikEgenskapskvalitet>> +
 <<avvikfullstendighet,«FeatureType» AvvikFullstendighet>> +
-<<avviklogiskkonsistens,«FeatureType» AvvikLogiskKonsistens>> +
-<<avvikstedfestingsnøyaktighet,«FeatureType» AvvikStedfestingsnøyaktighet>> +
+<<avvikstedfesting,«FeatureType» AvvikStedfesting>> +
+<<avvikkonsistens,«FeatureType» AvvikKonsistens>> +
 |===
  
 '''
@@ -208,7 +247,7 @@ SOSI_navn: INFORMASJON +
 [cols="20,80"]
 |===
 |*Navn:* 
-|*kvalitetselementFullstendighet*
+|*avvikstypeFullstendighet*
  
 |Definisjon: 
 |
@@ -217,9 +256,12 @@ SOSI_navn: INFORMASJON +
 |[1..1]
  
 |Type: 
-|<<kvalitetselementfullstendighet,«CodeList» KvalitetselementFullstendighet>>
+|<<avvikstypefullstendighet,«CodeList» AvvikstypeFullstendighet>>
 |Profilparametre i tagged values: 
 |
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypefullstendighet + 
+SOSI_datatype: T + 
+SOSI_lengde: 30 + 
 SOSI_navn: FULLSTENDIGHET + 
 |===
  
@@ -234,16 +276,16 @@ SOSI_navn: FULLSTENDIGHET +
  
 '''
  
-[[avvikegenskapsnøyaktighet]]
-==== «FeatureType» AvvikEgenskapsnøyaktighet
-*Definisjon:* Avvik innenfor kategorien Egenskapsnøyaktighet
+[[avvikegenskapskvalitet]]
+==== «FeatureType» AvvikEgenskapskvalitet
+*Definisjon:* Avvik innenfor kategorien Egenskapkvalitet
  
 [discrete]
 ===== Egenskaper
 [cols="20,80"]
 |===
 |*Navn:* 
-|*kvalitetselementEgenskapsnøyaktighet*
+|*avvikstypeEgenskapskvalitet*
  
 |Definisjon: 
 |
@@ -252,10 +294,13 @@ SOSI_navn: FULLSTENDIGHET +
 |[1..1]
  
 |Type: 
-|<<kvalitetselementegenskapsnøyaktighet,«CodeList» KvalitetselementEgenskapsnøyaktighet>>
+|<<avvikstypeegenskapskvalitet,«CodeList» avvikstypeEgenskapskvalitet>>
 |Profilparametre i tagged values: 
 |
-SOSI_navn: EGENSKAPSNØYAKTIGHET + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet + 
+SOSI_datatype: T + 
+SOSI_lengde: 30 + 
+SOSI_navn: EGENSKAPSKVALITET + 
 |===
  
 [discrete]
@@ -269,8 +314,8 @@ SOSI_navn: EGENSKAPSNØYAKTIGHET +
  
 '''
  
-[[avviklogiskkonsistens]]
-==== «FeatureType» AvvikLogiskKonsistens
+[[avvikkonsistens]]
+==== «FeatureType» AvvikKonsistens
 *Definisjon:* Avvik innenfor kategorien Logisk konsistens
  
 [discrete]
@@ -278,7 +323,7 @@ SOSI_navn: EGENSKAPSNØYAKTIGHET +
 [cols="20,80"]
 |===
 |*Navn:* 
-|*kvalitetselementLogiskKonsistens*
+|*avvikstypeKonsistens*
  
 |Definisjon: 
 |
@@ -287,9 +332,12 @@ SOSI_navn: EGENSKAPSNØYAKTIGHET +
 |[1..1]
  
 |Type: 
-|<<kvalitetselementlogiskkonsistens,«CodeList» KvalitetselementLogiskKonsistens>>
+|<<avvikstypekonsistens,«CodeList» avvikstypeKonsistens>>
 |Profilparametre i tagged values: 
 |
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens + 
+SOSI_datatype: T + 
+SOSI_lengde: 30 + 
 SOSI_navn: KONSISTENS + 
 |===
  
@@ -304,8 +352,8 @@ SOSI_navn: KONSISTENS +
  
 '''
  
-[[avvikstedfestingsnøyaktighet]]
-==== «FeatureType» AvvikStedfestingsnøyaktighet
+[[avvikstedfesting]]
+==== «FeatureType» AvvikStedfesting
 *Definisjon:* Avvik innenfor kategorien Stedfestingsnøyaktighet
  
 [discrete]
@@ -313,7 +361,7 @@ SOSI_navn: KONSISTENS +
 [cols="20,80"]
 |===
 |*Navn:* 
-|*kvalitetselementStedfestingsnøyaktighet*
+|*avvikstypeStedfesting*
  
 |Definisjon: 
 |
@@ -322,9 +370,12 @@ SOSI_navn: KONSISTENS +
 |[1..1]
  
 |Type: 
-|<<kvalitetselementstedfestingsnøyaktighet,«CodeList» KvalitetselementStedfestingsnøyaktighet>>
+|<<avvikstypestedfesting,«CodeList» avvikstypeStedfesting>>
 |Profilparametre i tagged values: 
 |
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting + 
+SOSI_datatype: T + 
+SOSI_lengde: 30 + 
 SOSI_navn: STEDFESTING + 
 |===
  
@@ -351,7 +402,7 @@ SOSI_navn: STEDFESTING +
 |true
  
 |codeList
-|https://register.test.geonorge.no/sosi-kodelister/fkb/kartkontroll/avviksh%C3%A5ndtering
+|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikshandtering
  
 |SOSI_datatype
 |T
@@ -363,8 +414,8 @@ SOSI_navn: STEDFESTING +
  
 '''
  
-[[kvalitetselementfullstendighet]]
-==== «CodeList» KvalitetselementFullstendighet
+[[avvikstypefullstendighet]]
+==== «CodeList» AvvikstypeFullstendighet
 *Definisjon:* 
  
 [discrete]
@@ -375,7 +426,7 @@ SOSI_navn: STEDFESTING +
 |true
  
 |codeList
-|https://register.test.geonorge.no/sosi-kodelister/fkb/kartkontroll/kvalitetselementfullstendighet
+|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypefullstendighet
  
 |SOSI_datatype
 |T
@@ -387,8 +438,8 @@ SOSI_navn: STEDFESTING +
  
 '''
  
-[[kvalitetselementegenskapsnøyaktighet]]
-==== «CodeList» KvalitetselementEgenskapsnøyaktighet
+[[avvikstypeegenskapskvalitet]]
+==== «CodeList» avvikstypeEgenskapskvalitet
 *Definisjon:* 
  
 [discrete]
@@ -399,20 +450,20 @@ SOSI_navn: STEDFESTING +
 |true
  
 |codeList
-|https://register.test.geonorge.no/sosi-kodelister/fkb/kartkontroll/kvalitetetselementegenskapsn%C3%B8yaktighet
+|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet
  
 |SOSI_datatype
 |T
  
 |SOSI_navn
-|EGENSKAPSNØYAKTIGHET
+|EGENSKAPSKVALITET
  
 |===
  
 '''
  
-[[kvalitetselementlogiskkonsistens]]
-==== «CodeList» KvalitetselementLogiskKonsistens
+[[avvikstypekonsistens]]
+==== «CodeList» avvikstypeKonsistens
 *Definisjon:* 
  
 [discrete]
@@ -423,7 +474,7 @@ SOSI_navn: STEDFESTING +
 |true
  
 |codeList
-|https://register.test.geonorge.no/sosi-kodelister/fkb/kartkontroll/p%C3%A5visning
+|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens
  
 |SOSI_datatype
 |T
@@ -435,8 +486,8 @@ SOSI_navn: STEDFESTING +
  
 '''
  
-[[kvalitetselementstedfestingsnøyaktighet]]
-==== «CodeList» KvalitetselementStedfestingsnøyaktighet
+[[avvikstypestedfesting]]
+==== «CodeList» avvikstypeStedfesting
 *Definisjon:* 
  
 [discrete]
@@ -445,6 +496,9 @@ SOSI_navn: STEDFESTING +
 |===
 |asDictionary
 |true
+ 
+|codeList
+|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting
  
 |SOSI_datatype
 |T
