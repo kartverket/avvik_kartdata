@@ -2,21 +2,18 @@
 ifeval::["{backend}" == "html5"]
 
 ****
-WARNING: Denne standarden er erstattet av en nyere versjon!
 
 [TIP]
-Dette dokumentet kan også lastes ned link:{prodspek-url}/{versjon}/{datasett}_5.0.pdf[som PDF].
+Dette dokumentet kan også lastes ned link:{prodspek-url}/{versjon}/{datasett}_{versjon}.pdf[som PDF].
 
 *Publisert*: {publisert} +
 *Denne versjonen finnes på*: {prodspek-url}/{versjon} +
 - {prodspek-url}/{versjon}[HTML-dokument] +
 - {uml-url}[HTML-visning av UML-modellen] +
 *Nyeste versjon finnes på*: {prodspek-url} +
-*Denne versjonen erstatter*: {prodspek-forrige-url}[{datasett} {versjon-forrige}] +
 *Faglig godkjent av*: Geovekst +
 *Formelt godkjent av*: Kartverket +
 
-Vedtatt som standard av Standardiseringskomiteen for Geomatikk 
 
 endif::[]
 
@@ -26,7 +23,6 @@ ifeval::["{backend}" == "pdf"]
 {empty} +
 
 ****
-*Advarsel*: Denne standarden er erstattet av en nyere versjon!
 
 *Publisert*: {publisert} +
 *Denne versjonen finnes på*: {prodspek-url}/{versjon} +
@@ -34,11 +30,8 @@ ifeval::["{backend}" == "pdf"]
 - {prodspek-url}/{versjon}/{datasett}_5.0.pdf[PDF-dokument] +
 - {uml-url}[HTML-visning av UML-modellen] +
 *Nyeste versjon finnes på*: {prodspek-url} +
-*Denne versjonen erstatter*: {prodspek-forrige-url}[{datasett} {versjon-forrige}] +
 *Faglig godkjent av*: Geovekst +
 *Formelt godkjent av*: Kartverket  +
-
-Vedtatt som standard av Standardiseringskomiteen for Geomatikk 
 
 endif::[]
 
