@@ -1,6 +1,6 @@
 :datasett: Kartkontroll
 :versjon: 1.0
-:publisert: 2022-05-05
+:publisert: 2022-05-09
 :skjema-versjon: 1.0
 
 // All informasjon i hode over denne linja må fylles ut for hvert datasett. Linjene under settes av de gitte variablene over og i adoc_parametere.adoc

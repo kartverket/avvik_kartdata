@@ -504,9 +504,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#avvikstedfesting">5.2.5. «FeatureType» AvvikStedfesting</a></li>
 <li><a href="#avvikshåndtering">5.2.6. «CodeList» Avvikshåndtering</a></li>
 <li><a href="#avvikstypefullstendighet">5.2.7. «CodeList» AvvikstypeFullstendighet</a></li>
-<li><a href="#avvikstypeegenskapskvalitet">5.2.8. «CodeList» avvikstypeEgenskapskvalitet</a></li>
-<li><a href="#avvikstypekonsistens">5.2.9. «CodeList» avvikstypeKonsistens</a></li>
-<li><a href="#avvikstypestedfesting">5.2.10. «CodeList» avvikstypeStedfesting</a></li>
+<li><a href="#avvikstypeegenskapskvalitet">5.2.8. «CodeList» AvvikstypeEgenskapskvalitet</a></li>
+<li><a href="#avvikstypekonsistens">5.2.9. «CodeList» AvvikstypeKonsistens</a></li>
+<li><a href="#avvikstypestedfesting">5.2.10. «CodeList» AvvikstypeStedfesting</a></li>
 </ul>
 </li>
 </ul>
@@ -611,7 +611,7 @@ Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produkts
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Publisert</strong>: 2022-05-05<br>
+<p><strong>Publisert</strong>: 2022-05-09<br>
 <strong>Denne versjonen finnes på</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/Kartkontroll/1.0" class="bare">https://sosi.geonorge.no/produktspesifikasjoner/Kartkontroll/1.0</a><br>
 - <a href="https://sosi.geonorge.no/produktspesifikasjoner/Kartkontroll/1.0">HTML-dokument</a><br>
 - <a href="https://sosi.geonorge.no/uml-modeller/sosi-del-3-produktspesifikasjoner/Kartkontroll/1.0">HTML-visning av UML-modellen</a><br>
@@ -882,12 +882,16 @@ Ikke angitt</p>
 </colgroup>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Contains deviations from control of geodata"@en</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Describes deviations from map control" @en</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Describes deviations from map control"@en</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">designation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Product spesification Kartkontroll 1.0" @en</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Product spesification Kartkontroll 1.0"@en</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
@@ -899,7 +903,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_langnavn</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kartkontroll</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbakemelding på avvik ved kontroll av geodata</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_modellstatus</p></td>
@@ -953,7 +957,10 @@ Ikke angitt</p>
 <div class="sect3">
 <h4 id="kartkontrollgenerell"><a class="anchor" href="#kartkontrollgenerell"></a>5.2.1. «FeatureType» KartkontrollGenerell (abstrakt)</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong></p>
+<p><strong>Definisjon:</strong> abstrakt objekttype som inneholder felles egenskaper for alle typer tilbakemeldinger på avvik.</p>
+</div>
+<div class="paragraph">
+<p>Som geometri for avviket benyttes geometrien til objektet som avviket er knyttet til, eller det etableres et punkt som representerer posisjonen til avviket i terrenget.</p>
 </div>
 <h5 id="trueegenskaper" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -968,7 +975,8 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikets posisjon.</p>
+<p class="tableblock">Punkt-geometri benyttes der avviket er knyttet til et punktobjekt eller der avviket er knyttet til en mangel i dataene (posisjonerer hvor noe mangler).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -992,7 +1000,8 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikets utstrekning.</p>
+<p class="tableblock">Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -1016,7 +1025,8 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikets område.</p>
+<p class="tableblock">Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -1048,7 +1058,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/boolean">boolean</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/Boolean">Boolean</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
@@ -1212,7 +1222,7 @@ SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inv: (self.område -&gt; size() ) + (self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1</p></td>
 </tr>
 </tbody>
 </table>
@@ -1252,7 +1262,7 @@ SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">angir type avvik innenfor kategorien fullstendighet (manglende objekt/overskytende objekt)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -1304,7 +1314,7 @@ SOSI_navn: FULLSTENDIGHET<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">angir type avvik innenfor kategorien egenskapskvalitet (feilklassifisering e.l.)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -1312,7 +1322,7 @@ SOSI_navn: FULLSTENDIGHET<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypeegenskapskvalitet">«CodeList» avvikstypeEgenskapskvalitet</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypeegenskapskvalitet">«CodeList» AvvikstypeEgenskapskvalitet</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
@@ -1356,7 +1366,7 @@ SOSI_navn: EGENSKAPSKVALITET<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">angir type avvik innenfor kategorien Logisk konsistens</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -1364,7 +1374,7 @@ SOSI_navn: EGENSKAPSKVALITET<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypekonsistens">«CodeList» avvikstypeKonsistens</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypekonsistens">«CodeList» AvvikstypeKonsistens</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
@@ -1408,7 +1418,7 @@ SOSI_navn: KONSISTENS<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">angir type avvik innenfor kategorien stedfestingskvalitet</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
@@ -1416,7 +1426,7 @@ SOSI_navn: KONSISTENS<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypestedfesting">«CodeList» avvikstypeStedfesting</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypestedfesting">«CodeList» AvvikstypeStedfesting</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
@@ -1445,7 +1455,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <div class="sect3">
 <h4 id="avvikshåndtering"><a class="anchor" href="#avvikshåndtering"></a>5.2.6. «CodeList» Avvikshåndtering</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong></p>
+<p><strong>Definisjon:</strong> kodeliste med verdier som forteller hvordan avviket skal rettes/håndteres.</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-2" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1477,7 +1487,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <div class="sect3">
 <h4 id="avvikstypefullstendighet"><a class="anchor" href="#avvikstypefullstendighet"></a>5.2.7. «CodeList» AvvikstypeFullstendighet</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong></p>
+<p><strong>Definisjon:</strong> Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Fullstendighet</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-3" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1507,9 +1517,9 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypeegenskapskvalitet"><a class="anchor" href="#avvikstypeegenskapskvalitet"></a>5.2.8. «CodeList» avvikstypeEgenskapskvalitet</h4>
+<h4 id="avvikstypeegenskapskvalitet"><a class="anchor" href="#avvikstypeegenskapskvalitet"></a>5.2.8. «CodeList» AvvikstypeEgenskapskvalitet</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong></p>
+<p><strong>Definisjon:</strong> Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Egenskapskvalitet</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-4" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1539,9 +1549,9 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypekonsistens"><a class="anchor" href="#avvikstypekonsistens"></a>5.2.9. «CodeList» avvikstypeKonsistens</h4>
+<h4 id="avvikstypekonsistens"><a class="anchor" href="#avvikstypekonsistens"></a>5.2.9. «CodeList» AvvikstypeKonsistens</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong></p>
+<p><strong>Definisjon:</strong> Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Logisk konsistens</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-5" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1571,9 +1581,9 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypestedfesting"><a class="anchor" href="#avvikstypestedfesting"></a>5.2.10. «CodeList» avvikstypeStedfesting</h4>
+<h4 id="avvikstypestedfesting"><a class="anchor" href="#avvikstypestedfesting"></a>5.2.10. «CodeList» AvvikstypeStedfesting</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong></p>
+<p><strong>Definisjon:</strong> Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Stedfestingskvalitet</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-6" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -2347,7 +2357,7 @@ av denne lisensen og ikke kan viderebrukes</p>
 <div id="footer">
 <div id="footer-text">
 Versjon 1.0<br>
-Last updated 2022-05-05 13:10:19 +0200
+Last updated 2022-05-09 12:58:23 +0200
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
