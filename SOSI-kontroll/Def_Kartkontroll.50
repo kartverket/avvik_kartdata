@@ -1,0 +1,14 @@
+[SyntaksDefinisjoner]
+kap50\Kartkontroll_d.50
+STD\SOSISTD.50
+
+[KodeForklaringer]
+STD\KODER.50
+
+[UtvalgsRegler]
+kap50\Kartkontroll_u.50
+
+[ObjektDefinisjoner]
+kap50\Kartkontroll_o.50
+STD\Flateavgrensning_o.50
+

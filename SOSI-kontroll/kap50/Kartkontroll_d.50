@@ -1,0 +1,45 @@
+! *   Kartkontroll   Elementdefinisjoner generert fra SOSI UML modell   09.05.2022 12:47:54   *!
+
+
+! KartkontrollGenerell
+
+! AvvikFullstendighet
+
+! AvvikEgenskapskvalitet
+
+! AvvikKonsistens
+
+! AvvikStedfesting
+
+.DEF
+..OBJTYPE T32
+
+.DEF
+..PÅVISNING BOOLSK
+
+.DEF
+..AVVIKSHÅNDTERING T
+
+.DEF
+..AVVIK_OBJEKTTYPE T
+
+.DEF
+..DATASETT T
+
+.DEF
+..OBJEKTPEKER T
+
+.DEF
+..INFORMASJON T
+
+.DEF
+..FULLSTENDIGHET T
+
+.DEF
+..EGENSKAPSKVALITET T
+
+.DEF
+..KONSISTENS T
+
+.DEF
+..STEDFESTING T
