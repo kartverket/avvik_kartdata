@@ -6,11 +6,14 @@
 ==== Profilparametre i tagged values
 [cols="20,80"]
 |===
+|definition
+|"Contains deviations from control of geodata"@en
+ 
 |description
-|"Describes deviations from map control" @en
+|"Describes deviations from map control"@en
  
 |designation
-|"Product spesification Kartkontroll 1.0" @en
+|"Product spesification Kartkontroll 1.0"@en
  
 |language
 |no
@@ -19,7 +22,7 @@
 |Kartkontroll
  
 |SOSI_langnavn
-|Kartkontroll
+|Tilbakemelding på avvik ved kontroll av geodata
  
 |SOSI_modellstatus
 |utkastOgSkjult
@@ -61,7 +64,9 @@ image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagra
  
 [[kartkontrollgenerell]]
 ==== «FeatureType» KartkontrollGenerell (abstrakt)
-*Definisjon:* 
+*Definisjon:* abstrakt objekttype som inneholder felles egenskaper for alle typer tilbakemeldinger på avvik.
+
+Som geometri for avviket benyttes geometrien til objektet som avviket er knyttet til, eller det etableres et punkt som representerer posisjonen til avviket i terrenget.
  
 [discrete]
 ===== Egenskaper
@@ -71,7 +76,9 @@ image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagra
 |*posisjon*
  
 |Definisjon: 
-|
+|avvikets posisjon.
+
+Punkt-geometri benyttes der avviket er knyttet til et punktobjekt eller der avviket er knyttet til en mangel i dataene (posisjonerer hvor noe mangler).
  
 |Multiplisitet: 
 |[0..1]
@@ -85,7 +92,9 @@ image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagra
 |*utstrekning*
  
 |Definisjon: 
-|
+|avvikets utstrekning.
+
+Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.
  
 |Multiplisitet: 
 |[0..1]
@@ -99,7 +108,9 @@ image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagra
 |*område*
  
 |Definisjon: 
-|
+|avvikets område.
+
+Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.
  
 |Multiplisitet: 
 |[0..1]
@@ -119,7 +130,7 @@ image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagra
 |[1..1]
  
 |Type: 
-|http://skjema.geonorge.no/SOSI/basistype/boolean[boolean]
+|http://skjema.geonorge.no/SOSI/basistype/Boolean[Boolean]
 |Profilparametre i tagged values: 
 |
 SOSI_navn: PÅVISNING + 
@@ -221,7 +232,7 @@ SOSI_navn: INFORMASJON +
 |*skal ha en av geometriene PUNKT, KURVE eller FLATE*
  
 |Beskrivelse: 
-|
+|inv: (self.område -&gt; size() ) + (self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1
  
 |===
  
@@ -250,7 +261,7 @@ SOSI_navn: INFORMASJON +
 |*avvikstypeFullstendighet*
  
 |Definisjon: 
-|
+|angir type avvik innenfor kategorien fullstendighet (manglende objekt/overskytende objekt)
  
 |Multiplisitet: 
 |[1..1]
@@ -288,13 +299,13 @@ SOSI_navn: FULLSTENDIGHET +
 |*avvikstypeEgenskapskvalitet*
  
 |Definisjon: 
-|
+|angir type avvik innenfor kategorien egenskapskvalitet (feilklassifisering e.l.)
  
 |Multiplisitet: 
 |[1..1]
  
 |Type: 
-|<<avvikstypeegenskapskvalitet,«CodeList» avvikstypeEgenskapskvalitet>>
+|<<avvikstypeegenskapskvalitet,«CodeList» AvvikstypeEgenskapskvalitet>>
 |Profilparametre i tagged values: 
 |
 defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet + 
@@ -326,13 +337,13 @@ SOSI_navn: EGENSKAPSKVALITET +
 |*avvikstypeKonsistens*
  
 |Definisjon: 
-|
+|angir type avvik innenfor kategorien Logisk konsistens
  
 |Multiplisitet: 
 |[1..1]
  
 |Type: 
-|<<avvikstypekonsistens,«CodeList» avvikstypeKonsistens>>
+|<<avvikstypekonsistens,«CodeList» AvvikstypeKonsistens>>
 |Profilparametre i tagged values: 
 |
 defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens + 
@@ -364,13 +375,13 @@ SOSI_navn: KONSISTENS +
 |*avvikstypeStedfesting*
  
 |Definisjon: 
-|
+|angir type avvik innenfor kategorien stedfestingskvalitet
  
 |Multiplisitet: 
 |[1..1]
  
 |Type: 
-|<<avvikstypestedfesting,«CodeList» avvikstypeStedfesting>>
+|<<avvikstypestedfesting,«CodeList» AvvikstypeStedfesting>>
 |Profilparametre i tagged values: 
 |
 defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting + 
@@ -392,7 +403,7 @@ SOSI_navn: STEDFESTING +
  
 [[avvikshåndtering]]
 ==== «CodeList» Avvikshåndtering
-*Definisjon:* 
+*Definisjon:* kodeliste med verdier som forteller hvordan avviket skal rettes/håndteres.
  
 [discrete]
 ===== Profilparametre i tagged values
@@ -416,7 +427,7 @@ SOSI_navn: STEDFESTING +
  
 [[avvikstypefullstendighet]]
 ==== «CodeList» AvvikstypeFullstendighet
-*Definisjon:* 
+*Definisjon:* Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Fullstendighet
  
 [discrete]
 ===== Profilparametre i tagged values
@@ -439,8 +450,8 @@ SOSI_navn: STEDFESTING +
 '''
  
 [[avvikstypeegenskapskvalitet]]
-==== «CodeList» avvikstypeEgenskapskvalitet
-*Definisjon:* 
+==== «CodeList» AvvikstypeEgenskapskvalitet
+*Definisjon:* Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Egenskapskvalitet
  
 [discrete]
 ===== Profilparametre i tagged values
@@ -463,8 +474,8 @@ SOSI_navn: STEDFESTING +
 '''
  
 [[avvikstypekonsistens]]
-==== «CodeList» avvikstypeKonsistens
-*Definisjon:* 
+==== «CodeList» AvvikstypeKonsistens
+*Definisjon:* Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Logisk konsistens
  
 [discrete]
 ===== Profilparametre i tagged values
@@ -487,8 +498,8 @@ SOSI_navn: STEDFESTING +
 '''
  
 [[avvikstypestedfesting]]
-==== «CodeList» avvikstypeStedfesting
-*Definisjon:* 
+==== «CodeList» AvvikstypeStedfesting
+*Definisjon:* Kodeliste med verdier for forskjellige typer avvik innenfor kategorien Stedfestingskvalitet
  
 [discrete]
 ===== Profilparametre i tagged values
