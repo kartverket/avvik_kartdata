@@ -175,7 +175,18 @@ include::kap11.adoc[]
 <<<
 
 == Tilleggsinformasjon
-Ingen angitt informasjon
+
+=== Eksempler på koding av avvik etter denne produktspesifikasjonen
+
+.Eksempel på koding ved dokumentert manglende Mønelinje 
+image::figurer/fullstendighet_mangler.png[link=figurer/fullstendighet_mangler.png, alt="Viser manglende Mønelinje."]
+
+.Eksempel på koding ved overskytende Veranda 
+image::figurer/fullstendighet_overskytende.png[link=figurer/fullstendighet_overskytende.png, alt="Viser overskytende Veranda."]
+
+.Eksempel på koding ved feiltolket objekttype. Stein er feiltolket som kumlokk 
+image::figurer/egenskapskvalitet_feilobjekt.png[link=figurer/egenskapskvalitet_feilobjekt.png, alt="Viser Stein feiltolket som Kumlokk."]
+
 
 == Metadata
 
