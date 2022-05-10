@@ -637,7 +637,7 @@ Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produkts
 <p>Produktspesifikasjon Kartkontroll 1.0 er laget for å ha en dokumentert og enhetlig måte å gi tilbakemelding til leverandør av kartdata nå det oppdages avvik i kontrollen av dataene hos oppdragsgiver. Produktspesifikasjonen baserer seg på at kravene til dataene er satt i henhold til rammeverket definert av standarden Geodatakvalitet <a href="#G">[G]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Produktspesifikasjonen er utarbeidet av Kartverket spesielt med tanke på bruk i FKB-kartleggingsprosjekter der Kartverket - på vegne av Geovekst-samarbeidet - er oppdragsgiver og kontrollør, mens oppdragstaker er et kartleggingsfirma. Produktspesifikasjonen bør imidlertid også kunne brukes på andre typer geodata som følger kvalitetsmodellen i standarden Geodatakvalitet <a href="#G">[G]</a>.</p>
+<p>Produktspesifikasjonen er utarbeidet av Kartverket spesielt med tanke på bruk i FKB-kartleggingsprosjekter der Kartverket - på vegne av Geovekst-samarbeidet - er oppdragsgiver og kontrollør, mens oppdragstaker er et kartleggingsfirma. Produktspesifikasjonen bør imidlertid også kunne brukes på andre typer geodata som følger kvalitetsmodellen i standarden Geodatakvalitet <a href="#G">[G]</a>. Se <a href="#trueeksempler-på-koding-av-avvik-etter-denne-produktspesifikasjonen">Eksempler på koding av avvik etter denne produktspesifikasjonen</a> i kapittel 12.1.</p>
 </div>
 <div class="paragraph">
 <p>Denne produktspesifikasjonen er utarbeidet iht. SOSI produktspesifikasjoner – Krav og godkjenning 5.0 <a href="#SOSI-KRAV">[SOSI-KRAV]</a>. UML-modellen som ligger til grunn for innhold i diagrammene og dokumentasjon i kap. 5, følger reglene i SOSI Regler for UML-modellering, versjon 5.1 <a href="#SOSI-UML">[SOSI-UML]</a>. <a href="http://sosi.geonorge.no/veiledere/UML">Denne veilederen</a> gir hjelp til å lese UML-diagrammene.</p>
@@ -736,7 +736,7 @@ Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produkts
 <div class="sect2">
 <h3 id="truehovedtema"><a class="anchor" href="#truehovedtema"></a>3.5. Hovedtema</h3>
 <div class="paragraph">
-<p>???</p>
+<p>Datakvalitet</p>
 </div>
 </div>
 <div class="sect2">
@@ -911,7 +911,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_modellstatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">utkastOgSkjult</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utkast</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_spesifikasjonstype</p></td>
@@ -1066,7 +1066,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_navn: PÅVISNING<br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_navn: SIKKER_PÅVISNING<br></p></td>
 </tr>
 </tbody>
 </table>
@@ -2042,8 +2042,8 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sikkerPåvisning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">..PÅVISNING</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..SIKKER_PÅVISNING</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2120,8 +2120,8 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sikkerPåvisning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">..PÅVISNING</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..SIKKER_PÅVISNING</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2156,7 +2156,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikstypeEgenskapskvalitet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» avvikstypeEgenskapskvalitet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» AvvikstypeEgenskapskvalitet</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">..EGENSKAPSKVALITET</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
@@ -2198,8 +2198,8 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sikkerPåvisning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">..PÅVISNING</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..SIKKER_PÅVISNING</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2234,7 +2234,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikstypeKonsistens</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» avvikstypeKonsistens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» AvvikstypeKonsistens</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">..KONSISTENS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
@@ -2276,8 +2276,8 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sikkerPåvisning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">..PÅVISNING</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..SIKKER_PÅVISNING</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2312,7 +2312,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikstypeStedfesting</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» avvikstypeStedfesting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» AvvikstypeStedfesting</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">..STEDFESTING</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
@@ -2379,7 +2379,7 @@ av denne lisensen og ikke kan viderebrukes</p>
 <div id="footer">
 <div id="footer-text">
 Versjon 1.0<br>
-Last updated 2022-05-09 15:18:33 +0200
+Last updated 2022-05-10 09:33:47 +0200
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
