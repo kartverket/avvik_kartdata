@@ -1,11 +1,11 @@
-! *   Kartkontroll   Objektdefinisjoner generert fra SOSI UML modell   09.05.2022 12:47:54   *!
+! *   Kartkontroll   Objektdefinisjoner generert fra SOSI UML modell   10.05.2022 09:25:25   *!
 
 
 .OBJEKTTYPE
 ..TYPENAVN KartkontrollGenerell
 ..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (KartkontrollGenerell)
-..EGENSKAP "sikkerPåvisning" Boolean "..PÅVISNING" BOOLSK 1 1  >< ()
+..EGENSKAP "sikkerPåvisning" Boolean "..SIKKER_PÅVISNING" BOOLSK 1 1  >< ()
 ..EGENSKAP "avvikshåndtering" Avvikshåndtering "..AVVIKSHÅNDTERING" T 1 1  = (forvalter,leverandor,ingen)
 ..EGENSKAP "avvikObjekttype" CharacterString "..AVVIK_OBJEKTTYPE" T 1 1  >< ()
 ..EGENSKAP "datasett" CharacterString "..DATASETT" T 0 1  >< ()

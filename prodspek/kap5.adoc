@@ -25,7 +25,7 @@
 |Tilbakemelding på avvik ved kontroll av geodata
  
 |SOSI_modellstatus
-|utkastOgSkjult
+|utkast
  
 |SOSI_spesifikasjonstype
 |produktspesifikasjon
@@ -133,7 +133,7 @@ Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.
 |http://skjema.geonorge.no/SOSI/basistype/Boolean[Boolean]
 |Profilparametre i tagged values: 
 |
-SOSI_navn: PÅVISNING + 
+SOSI_navn: SIKKER_PÅVISNING + 
 |===
 [cols="20,80"]
 |===

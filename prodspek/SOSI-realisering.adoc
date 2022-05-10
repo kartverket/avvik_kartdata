@@ -28,8 +28,8 @@
 |[0..1]
  
 |sikkerPåvisning
-|boolean
-|..PÅVISNING
+|Boolean
+|..SIKKER_PÅVISNING
 |[1..1]
  
 |avvikshåndtering
@@ -92,8 +92,8 @@
 |[0..1]
  
 |sikkerPåvisning
-|boolean
-|..PÅVISNING
+|Boolean
+|..SIKKER_PÅVISNING
 |[1..1]
  
 |avvikshåndtering
@@ -122,7 +122,7 @@
 |[0..1]
  
 |avvikstypeEgenskapskvalitet
-|«CodeList» avvikstypeEgenskapskvalitet
+|«CodeList» AvvikstypeEgenskapskvalitet
 |..EGENSKAPSKVALITET
 |[1..1]
  
@@ -156,8 +156,8 @@
 |[0..1]
  
 |sikkerPåvisning
-|boolean
-|..PÅVISNING
+|Boolean
+|..SIKKER_PÅVISNING
 |[1..1]
  
 |avvikshåndtering
@@ -186,7 +186,7 @@
 |[0..1]
  
 |avvikstypeKonsistens
-|«CodeList» avvikstypeKonsistens
+|«CodeList» AvvikstypeKonsistens
 |..KONSISTENS
 |[1..1]
  
@@ -220,8 +220,8 @@
 |[0..1]
  
 |sikkerPåvisning
-|boolean
-|..PÅVISNING
+|Boolean
+|..SIKKER_PÅVISNING
 |[1..1]
  
 |avvikshåndtering
@@ -250,7 +250,7 @@
 |[0..1]
  
 |avvikstypeStedfesting
-|«CodeList» avvikstypeStedfesting
+|«CodeList» AvvikstypeStedfesting
 |..STEDFESTING
 |[1..1]
  
