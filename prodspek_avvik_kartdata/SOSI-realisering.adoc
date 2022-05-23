@@ -1,7 +1,7 @@
 // Start of SOSI-format
  
 [discrete]
-==== Objekttype: KartAvvik
+==== Objekttype: AvvikGenerell
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
@@ -15,6 +15,75 @@
 |posisjon
 |GM_Point
 |.PUNKT
+|[1..1]
+ 
+|utstrekning
+|GM_Curve
+|.KURVE
+|[1..1]
+ 
+|område
+|GM_Surface
+|.FLATE
+|[1..1]
+ 
+|avvikObjekttype
+|CharacterString
+|..AVVIK_OBJEKTTYPE
+|[1..1]
+ 
+|link
+|URI
+|..LINK
+|[0..1]
+ 
+|datasett
+|CharacterString
+|..DATASETT
+|[0..1]
+ 
+|objektpeker
+|CharacterString
+|..OBJEKTPEKER
+|[0..1]
+ 
+|informasjon
+|CharacterString
+|..INFORMASJON
+|[0..1]
+ 
+|avvikBeskrivelse
+|CharacterString
+|..AVVK_BESKRIVELSE
+|[1..1]
+ 
+|===
+ 
+[discrete]
+==== Objekttype: AvvikKonsistenskontroller
+ 
+[discrete]
+===== Modellelementnavn og SOSI_navn
+[cols="20,20,20,10"]
+|===
+|*Navn:* 
+|*Type:* 
+|*SOSI_navn:* 
+|*Mult.:* 
+ 
+|posisjon
+|GM_Point
+|.PUNKT
+|[1..1]
+ 
+|utstrekning
+|GM_Curve
+|.KURVE
+|[1..1]
+ 
+|område
+|GM_Surface
+|.FLATE
 |[1..1]
  
 |avvikObjekttype
@@ -43,8 +112,8 @@
 |[0..1]
  
 |avvikstype
-|CharacterString
-|..KONSISTENS
+|«CodeList» AvvikstypeKonsistenskontroller
+|..KONSISTENSKONTROLL
 |[1..1]
  
 |===
@@ -64,6 +133,16 @@
 |posisjon
 |GM_Point
 |.PUNKT
+|[1..1]
+ 
+|utstrekning
+|GM_Curve
+|.KURVE
+|[1..1]
+ 
+|område
+|GM_Surface
+|.FLATE
 |[1..1]
  
 |avvikObjekttype
@@ -125,6 +204,16 @@
 |.PUNKT
 |[1..1]
  
+|utstrekning
+|GM_Curve
+|.KURVE
+|[1..1]
+ 
+|område
+|GM_Surface
+|.FLATE
+|[1..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
@@ -168,7 +257,7 @@
 |===
  
 [discrete]
-==== Objekttype: AvvikKonsistens
+==== Objekttype: AvvikLogiskKonsistens
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
@@ -182,6 +271,16 @@
 |posisjon
 |GM_Point
 |.PUNKT
+|[1..1]
+ 
+|utstrekning
+|GM_Curve
+|.KURVE
+|[1..1]
+ 
+|område
+|GM_Surface
+|.FLATE
 |[1..1]
  
 |avvikObjekttype
@@ -219,9 +318,9 @@
 |..AVVIKSHÅNDTERING
 |[1..1]
  
-|avvikstypeKonsistens
-|«CodeList» AvvikstypeKonsistens
-|..KONSISTENS
+|avvikstypeLogiskKonsistens
+|«CodeList» AvvikstypeLogiskKonsistens
+|..LOGISK_KONSISTENS
 |[1..1]
  
 |===
@@ -241,6 +340,16 @@
 |posisjon
 |GM_Point
 |.PUNKT
+|[1..1]
+ 
+|utstrekning
+|GM_Curve
+|.KURVE
+|[1..1]
+ 
+|område
+|GM_Surface
+|.FLATE
 |[1..1]
  
 |avvikObjekttype
