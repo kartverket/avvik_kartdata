@@ -211,10 +211,10 @@ SOSI_navn: INFORMASJON +
 [cols="20,80"]
 |===
 |*Navn:* 
-|*skal ha en av geometriene PUNKT, KURVE eller FLATE*
+|*skal ha en og kun en av geometriene PUNKT, KURVE eller FLATE*
  
 |Beskrivelse: 
-|inv: (self.område -&gt; size() ) + (self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1
+|inv: (self.område -&gt; size() + self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1
  
 |===
  
@@ -292,7 +292,8 @@ SOSI_navn: AVVIKSHÅNDTERING +
  
 [[avvikgenerell]]
 ==== «FeatureType» AvvikGenerell
-*Definisjon:* avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikstype og informasjon.
+*Definisjon:* avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikBeskrivelse og informasjon. 
+Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret/detaljert benyttes.
  
 [discrete]
 ===== Egenskaper
@@ -346,7 +347,7 @@ SOSI_navn: AVVK_BESKRIVELSE +
 |<<avvikstypekonsistenskontroller,«CodeList» AvvikstypeKonsistenskontroller>>
 |Profilparametre i tagged values: 
 |
-defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistenskontroller + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller + 
 SOSI_datatype: T + 
 SOSI_lengde: 30 + 
 SOSI_navn: KONSISTENSKONTROLL + 
@@ -481,7 +482,7 @@ SOSI_navn: LOGISK_KONSISTENS +
 ==== «FeatureType» AvvikStedfesting
 *Definisjon:* avvik innenfor kategorien Stedfestingsnøyaktighet (jf. Geodatakvalitet).
 
-Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfelfige avvik og sammenligne med de gitte kravene. Avvikene i enkeltinnmålingene her egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan den enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.
+Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfeldige avvik og sammenligne med de gitte kravene. Avvikene i enkeltavvikene i en slik kontroll egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan de enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.
  
 [discrete]
 ===== Egenskaper
@@ -601,7 +602,7 @@ SOSI_navn: STEDFESTING +
 |true
  
 |codeList
-|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistenskontroller
+|https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller
  
 |SOSI_datatype
 |T
