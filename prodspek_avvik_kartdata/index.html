@@ -497,18 +497,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#trueomfang">5.1. Omfang</a></li>
 <li><a href="#truepakke-applicationschema-avvikkartdata-1-0">5.2. Pakke: «ApplicationSchema» AvvikKartdata 1.0</a>
 <ul class="sectlevel3">
-<li><a href="#avvikgenerell">5.2.1. «FeatureType» AvvikGenerell (abstrakt)</a></li>
+<li><a href="#avvikfellesegenskaper">5.2.1. «FeatureType» AvvikFellesegenskaper (abstrakt)</a></li>
 <li><a href="#kontrollgeodatakvalitet">5.2.2. «FeatureType» KontrollGeodatakvalitet (abstrakt)</a></li>
-<li><a href="#kartavvik">5.2.3. «FeatureType» KartAvvik</a></li>
-<li><a href="#avvikfullstendighet">5.2.4. «FeatureType» AvvikFullstendighet</a></li>
-<li><a href="#avvikegenskapskvalitet">5.2.5. «FeatureType» AvvikEgenskapskvalitet</a></li>
-<li><a href="#avvikkonsistens">5.2.6. «FeatureType» AvvikKonsistens</a></li>
-<li><a href="#avvikstedfesting">5.2.7. «FeatureType» AvvikStedfesting</a></li>
-<li><a href="#avvikshåndtering">5.2.8. «CodeList» Avvikshåndtering</a></li>
-<li><a href="#avvikstypefullstendighet">5.2.9. «CodeList» AvvikstypeFullstendighet</a></li>
-<li><a href="#avvikstypeegenskapskvalitet">5.2.10. «CodeList» AvvikstypeEgenskapskvalitet</a></li>
-<li><a href="#avvikstypekonsistens">5.2.11. «CodeList» AvvikstypeKonsistens</a></li>
-<li><a href="#avvikstypestedfesting">5.2.12. «CodeList» AvvikstypeStedfesting</a></li>
+<li><a href="#avvikgenerell">5.2.3. «FeatureType» AvvikGenerell</a></li>
+<li><a href="#avvikkonsistenskontroller">5.2.4. «FeatureType» AvvikKonsistenskontroller</a></li>
+<li><a href="#avvikfullstendighet">5.2.5. «FeatureType» AvvikFullstendighet</a></li>
+<li><a href="#avvikegenskapskvalitet">5.2.6. «FeatureType» AvvikEgenskapskvalitet</a></li>
+<li><a href="#avviklogiskkonsistens">5.2.7. «FeatureType» AvvikLogiskKonsistens</a></li>
+<li><a href="#avvikstedfesting">5.2.8. «FeatureType» AvvikStedfesting</a></li>
+<li><a href="#avvikshåndtering">5.2.9. «CodeList» Avvikshåndtering</a></li>
+<li><a href="#avvikstypefullstendighet">5.2.10. «CodeList» AvvikstypeFullstendighet</a></li>
+<li><a href="#avvikstypeegenskapskvalitet">5.2.11. «CodeList» AvvikstypeEgenskapskvalitet</a></li>
+<li><a href="#avvikstypekonsistenskontroller">5.2.12. «CodeList» AvvikstypeKonsistenskontroller</a></li>
+<li><a href="#avvikstypelogiskkonsistens">5.2.13. «CodeList» AvvikstypeLogiskKonsistens</a></li>
+<li><a href="#avvikstypestedfesting">5.2.14. «CodeList» AvvikstypeStedfesting</a></li>
 </ul>
 </li>
 </ul>
@@ -617,7 +619,7 @@ Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produkts
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Publisert</strong>: 2022-05-19<br>
+<p><strong>Publisert</strong>: 2022-05-23<br>
 <strong>Denne versjonen finnes på</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0" class="bare">https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0</a><br>
 - <a href="https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0">HTML-dokument</a><br>
 - <a href="https://sosi.geonorge.no/uml-modeller/sosi-del-3-produktspesifikasjoner/AvvikKartdata/1.0">HTML-visning av UML-modellen</a><br>
@@ -972,7 +974,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 </div>
 <hr>
 <div class="sect3">
-<h4 id="avvikgenerell"><a class="anchor" href="#avvikgenerell"></a>5.2.1. «FeatureType» AvvikGenerell (abstrakt)</h4>
+<h4 id="avvikfellesegenskaper"><a class="anchor" href="#avvikfellesegenskaper"></a>5.2.1. «FeatureType» AvvikFellesegenskaper (abstrakt)</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> abstrakt objekttype som inneholder felles egenskaper for alle typer tilbakemeldinger på avvik.</p>
 </div>
@@ -999,6 +1001,56 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Point">GM_Point</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>utstrekning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikets utstrekning.</p>
+<p class="tableblock">Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Curve">GM_Curve</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>område</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikets område.</p>
+<p class="tableblock">Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Surface">GM_Surface</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1154,11 +1206,11 @@ SOSI_navn: LINK<br></p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>skal ha en av geometriene PUNKT, KURVE eller FLATE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>skal ha en og kun en av geometriene PUNKT, KURVE eller FLATE</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">inv: (self.område -&gt; size() ) + (self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inv: (self.område -&gt; size() + self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1</p></td>
 </tr>
 </tbody>
 </table>
@@ -1171,8 +1223,9 @@ SOSI_navn: LINK<br></p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtyper:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#kontrollgeodatakvalitet">«FeatureType» KontrollGeodatakvalitet</a><br>
-<a href="#kartavvik">«FeatureType» KartAvvik</a><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikgenerell">«FeatureType» AvvikGenerell</a><br>
+<a href="#avvikkonsistenskontroller">«FeatureType» AvvikKonsistenskontroller</a><br>
+<a href="#kontrollgeodatakvalitet">«FeatureType» KontrollGeodatakvalitet</a><br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1236,7 +1289,7 @@ SOSI_navn: LINK<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikshandtering" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikshandtering</a><br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikshandtering" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikshandtering</a><br>
 SOSI_datatype: T<br>
 SOSI_lengde: 30<br>
 SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
@@ -1252,23 +1305,24 @@ SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikgenerell">«FeatureType» AvvikGenerell</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikfellesegenskaper">«FeatureType» AvvikFellesegenskaper</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtyper:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstedfesting">«FeatureType» AvvikStedfesting</a><br>
 <a href="#avvikfullstendighet">«FeatureType» AvvikFullstendighet</a><br>
 <a href="#avvikegenskapskvalitet">«FeatureType» AvvikEgenskapskvalitet</a><br>
-<a href="#avvikkonsistens">«FeatureType» AvvikKonsistens</a><br></p></td>
+<a href="#avviklogiskkonsistens">«FeatureType» AvvikLogiskKonsistens</a><br></p></td>
 </tr>
 </tbody>
 </table>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="kartavvik"><a class="anchor" href="#kartavvik"></a>5.2.3. «FeatureType» KartAvvik</h4>
+<h4 id="avvikgenerell"><a class="anchor" href="#avvikgenerell"></a>5.2.3. «FeatureType» AvvikGenerell</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikstype og informasjon.</p>
+<p><strong>Definisjon:</strong> avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikBeskrivelse og informasjon.
+Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret/detaljert benyttes.</p>
 </div>
 <h5 id="trueegenskaper-3" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1279,7 +1333,7 @@ SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>avvikstype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>avvikBeskrivelse</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
@@ -1295,10 +1349,7 @@ SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens</a><br>
-SOSI_datatype: T<br>
-SOSI_lengde: 30<br>
-SOSI_navn: KONSISTENS<br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_navn: AVVK_BESKRIVELSE<br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1311,18 +1362,70 @@ SOSI_navn: KONSISTENS<br></p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikgenerell">«FeatureType» AvvikGenerell</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikfellesegenskaper">«FeatureType» AvvikFellesegenskaper</a></p></td>
 </tr>
 </tbody>
 </table>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikfullstendighet"><a class="anchor" href="#avvikfullstendighet"></a>5.2.4. «FeatureType» AvvikFullstendighet</h4>
+<h4 id="avvikkonsistenskontroller"><a class="anchor" href="#avvikkonsistenskontroller"></a>5.2.4. «FeatureType» AvvikKonsistenskontroller</h4>
+<div class="paragraph">
+<p><strong>Definisjon:</strong> avvik som beskriver manglende samsvar/konsistens mellom ulike objekter i et datasett, eller mellom datasett.</p>
+</div>
+<h5 id="trueegenskaper-4" class="discrete">Egenskaper</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>avvikstype</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egenskap som beskriver hva slags type konsistenskontroll er er kjørt for å finne avviket</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypekonsistenskontroller">«CodeList» AvvikstypeKonsistenskontroller</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller</a><br>
+SOSI_datatype: T<br>
+SOSI_lengde: 30<br>
+SOSI_navn: KONSISTENSKONTROLL<br></p></td>
+</tr>
+</tbody>
+</table>
+<h5 id="truearv-og-realiseringer-4" class="discrete">Arv og realiseringer</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikfellesegenskaper">«FeatureType» AvvikFellesegenskaper</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="avvikfullstendighet"><a class="anchor" href="#avvikfullstendighet"></a>5.2.5. «FeatureType» AvvikFullstendighet</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> avvik innenfor kvalitetskategorien Fullstendighet</p>
 </div>
-<h5 id="trueegenskaper-4" class="discrete">Egenskaper</h5>
+<h5 id="trueegenskaper-5" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1347,14 +1450,14 @@ SOSI_navn: KONSISTENS<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypefullstendighet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypefullstendighet</a><br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypefullstendighet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypefullstendighet</a><br>
 SOSI_datatype: T<br>
 SOSI_lengde: 30<br>
 SOSI_navn: FULLSTENDIGHET<br></p></td>
 </tr>
 </tbody>
 </table>
-<h5 id="truearv-og-realiseringer-4" class="discrete">Arv og realiseringer</h5>
+<h5 id="truearv-og-realiseringer-5" class="discrete">Arv og realiseringer</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1370,11 +1473,11 @@ SOSI_navn: FULLSTENDIGHET<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikegenskapskvalitet"><a class="anchor" href="#avvikegenskapskvalitet"></a>5.2.5. «FeatureType» AvvikEgenskapskvalitet</h4>
+<h4 id="avvikegenskapskvalitet"><a class="anchor" href="#avvikegenskapskvalitet"></a>5.2.6. «FeatureType» AvvikEgenskapskvalitet</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> avvik innenfor kategorien Egenskapkvalitet</p>
 </div>
-<h5 id="trueegenskaper-5" class="discrete">Egenskaper</h5>
+<h5 id="trueegenskaper-6" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1399,62 +1502,10 @@ SOSI_navn: FULLSTENDIGHET<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet</a><br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypeegenskapskvalitet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypeegenskapskvalitet</a><br>
 SOSI_datatype: T<br>
 SOSI_lengde: 30<br>
 SOSI_navn: EGENSKAPSKVALITET<br></p></td>
-</tr>
-</tbody>
-</table>
-<h5 id="truearv-og-realiseringer-5" class="discrete">Arv og realiseringer</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#kontrollgeodatakvalitet">«FeatureType» KontrollGeodatakvalitet</a></p></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="avvikkonsistens"><a class="anchor" href="#avvikkonsistens"></a>5.2.6. «FeatureType» AvvikKonsistens</h4>
-<div class="paragraph">
-<p><strong>Definisjon:</strong> avvik innenfor kategorien Logisk konsistens</p>
-</div>
-<h5 id="trueegenskaper-6" class="discrete">Egenskaper</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>avvikstypeKonsistens</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">angir type avvik innenfor kategorien Logisk konsistens</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypekonsistens">«CodeList» AvvikstypeKonsistens</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens</a><br>
-SOSI_datatype: T<br>
-SOSI_lengde: 30<br>
-SOSI_navn: KONSISTENS<br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1474,11 +1525,66 @@ SOSI_navn: KONSISTENS<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstedfesting"><a class="anchor" href="#avvikstedfesting"></a>5.2.7. «FeatureType» AvvikStedfesting</h4>
+<h4 id="avviklogiskkonsistens"><a class="anchor" href="#avviklogiskkonsistens"></a>5.2.7. «FeatureType» AvvikLogiskKonsistens</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> avvik innenfor kategorien Stedfestingsnøyaktighet</p>
+<p><strong>Definisjon:</strong> avvik innenfor kategorien Logisk konsistens</p>
 </div>
 <h5 id="trueegenskaper-7" class="discrete">Egenskaper</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>avvikstypeLogiskKonsistens</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">angir type avvik innenfor kategorien Logisk konsistens</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#avvikstypelogiskkonsistens">«CodeList» AvvikstypeLogiskKonsistens</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypelogiskkonsistens" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypelogiskkonsistens</a><br>
+SOSI_datatype: T<br>
+SOSI_lengde: 30<br>
+SOSI_navn: LOGISK_KONSISTENS<br></p></td>
+</tr>
+</tbody>
+</table>
+<h5 id="truearv-og-realiseringer-7" class="discrete">Arv og realiseringer</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#kontrollgeodatakvalitet">«FeatureType» KontrollGeodatakvalitet</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="avvikstedfesting"><a class="anchor" href="#avvikstedfesting"></a>5.2.8. «FeatureType» AvvikStedfesting</h4>
+<div class="paragraph">
+<p><strong>Definisjon:</strong> avvik innenfor kategorien Stedfestingsnøyaktighet (jf. Geodatakvalitet).</p>
+</div>
+<div class="paragraph">
+<p>Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfeldige avvik og sammenligne med de gitte kravene. Avvikene i enkeltavvikene i en slik kontroll egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan de enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.</p>
+</div>
+<h5 id="trueegenskaper-8" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1503,14 +1609,14 @@ SOSI_navn: KONSISTENS<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profilparametre i tagged values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting</a><br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultCodeSpace: <a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypestedfesting" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypestedfesting</a><br>
 SOSI_datatype: T<br>
 SOSI_lengde: 30<br>
 SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 </tbody>
 </table>
-<h5 id="truearv-og-realiseringer-7" class="discrete">Arv og realiseringer</h5>
+<h5 id="truearv-og-realiseringer-8" class="discrete">Arv og realiseringer</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1526,7 +1632,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikshåndtering"><a class="anchor" href="#avvikshåndtering"></a>5.2.8. «CodeList» Avvikshåndtering</h4>
+<h4 id="avvikshåndtering"><a class="anchor" href="#avvikshåndtering"></a>5.2.9. «CodeList» Avvikshåndtering</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> kodeliste med verdier som forteller hvordan avviket skal rettes/håndteres.</p>
 </div>
@@ -1543,7 +1649,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikshandtering" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikshandtering</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikshandtering" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikshandtering</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_datatype</p></td>
@@ -1558,7 +1664,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypefullstendighet"><a class="anchor" href="#avvikstypefullstendighet"></a>5.2.9. «CodeList» AvvikstypeFullstendighet</h4>
+<h4 id="avvikstypefullstendighet"><a class="anchor" href="#avvikstypefullstendighet"></a>5.2.10. «CodeList» AvvikstypeFullstendighet</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik innenfor kategorien Fullstendighet</p>
 </div>
@@ -1575,7 +1681,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypefullstendighet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypefullstendighet</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypefullstendighet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypefullstendighet</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_datatype</p></td>
@@ -1590,7 +1696,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypeegenskapskvalitet"><a class="anchor" href="#avvikstypeegenskapskvalitet"></a>5.2.10. «CodeList» AvvikstypeEgenskapskvalitet</h4>
+<h4 id="avvikstypeegenskapskvalitet"><a class="anchor" href="#avvikstypeegenskapskvalitet"></a>5.2.11. «CodeList» AvvikstypeEgenskapskvalitet</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik innenfor kategorien Egenskapskvalitet</p>
 </div>
@@ -1607,7 +1713,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypeegenskapskvalitet</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypeegenskapskvalitet" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypeegenskapskvalitet</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_datatype</p></td>
@@ -1622,9 +1728,9 @@ SOSI_navn: STEDFESTING<br></p></td>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypekonsistens"><a class="anchor" href="#avvikstypekonsistens"></a>5.2.11. «CodeList» AvvikstypeKonsistens</h4>
+<h4 id="avvikstypekonsistenskontroller"><a class="anchor" href="#avvikstypekonsistenskontroller"></a>5.2.12. «CodeList» AvvikstypeKonsistenskontroller</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik innenfor kategorien Logisk konsistens</p>
+<p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik funnet ved kjøring av konsistenskontroller mellom ulike kartdata.</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-5" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1639,7 +1745,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypekonsistens</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_datatype</p></td>
@@ -1647,16 +1753,16 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_navn</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KONSISTENS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KONSISTENSKONTROLL</p></td>
 </tr>
 </tbody>
 </table>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="avvikstypestedfesting"><a class="anchor" href="#avvikstypestedfesting"></a>5.2.12. «CodeList» AvvikstypeStedfesting</h4>
+<h4 id="avvikstypelogiskkonsistens"><a class="anchor" href="#avvikstypelogiskkonsistens"></a>5.2.13. «CodeList» AvvikstypeLogiskKonsistens</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik innenfor kategorien Stedfestingskvalitet</p>
+<p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik innenfor kategorien Logisk konsistens</p>
 </div>
 <h5 id="trueprofilparametre-i-tagged-values-6" class="discrete">Profilparametre i tagged values</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1671,7 +1777,39 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/kartkontroll/avvikstypestedfesting</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypelogiskkonsistens" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypelogiskkonsistens</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_datatype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_navn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LOGISK_KONSISTENS</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="avvikstypestedfesting"><a class="anchor" href="#avvikstypestedfesting"></a>5.2.14. «CodeList» AvvikstypeStedfesting</h4>
+<div class="paragraph">
+<p><strong>Definisjon:</strong> kodeliste med verdier for forskjellige typer avvik innenfor kategorien Stedfestingskvalitet</p>
+</div>
+<h5 id="trueprofilparametre-i-tagged-values-7" class="discrete">Profilparametre i tagged values</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asDictionary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypestedfesting" class="bare">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypestedfesting</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_datatype</p></td>
@@ -2078,7 +2216,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <div class="paragraph">
 <p>SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <a href="#SOSI-FORMAT">[SOSI-FORMAT]</a>. Under en utlisting av SOSI-formatrealiseringen:</p>
 </div>
-<h4 id="trueobjekttype-kartavvik" class="discrete">Objekttype: KartAvvik</h4>
+<h4 id="trueobjekttype-avvikgenerell" class="discrete">Objekttype: AvvikGenerell</h4>
 <h5 id="truemodellelementnavn-og-sosi_navn" class="discrete">Modellelementnavn og SOSI_navn</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2098,6 +2236,90 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..AVVIK_OBJEKTTYPE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..LINK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">datasett</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..DATASETT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">objektpeker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..OBJEKTPEKER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">informasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..INFORMASJON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikBeskrivelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..AVVK_BESKRIVELSE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="trueobjekttype-avvikkonsistenskontroller" class="discrete">Objekttype: AvvikKonsistenskontroller</h4>
+<h5 id="truemodellelementnavn-og-sosi_navn-2" class="discrete">Modellelementnavn og SOSI_navn</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 28.5714%;">
+<col style="width: 28.5714%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SOSI_navn:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mult.:</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2132,14 +2354,14 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikstype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">..KONSISTENS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» AvvikstypeKonsistenskontroller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..KONSISTENSKONTROLL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 </tbody>
 </table>
 <h4 id="trueobjekttype-avvikfullstendighet" class="discrete">Objekttype: AvvikFullstendighet</h4>
-<h5 id="truemodellelementnavn-og-sosi_navn-2" class="discrete">Modellelementnavn og SOSI_navn</h5>
+<h5 id="truemodellelementnavn-og-sosi_navn-3" class="discrete">Modellelementnavn og SOSI_navn</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 28.5714%;">
@@ -2158,6 +2380,18 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2211,7 +2445,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tbody>
 </table>
 <h4 id="trueobjekttype-avvikegenskapskvalitet" class="discrete">Objekttype: AvvikEgenskapskvalitet</h4>
-<h5 id="truemodellelementnavn-og-sosi_navn-3" class="discrete">Modellelementnavn og SOSI_navn</h5>
+<h5 id="truemodellelementnavn-og-sosi_navn-4" class="discrete">Modellelementnavn og SOSI_navn</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 28.5714%;">
@@ -2230,6 +2464,18 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2282,8 +2528,8 @@ SOSI_navn: STEDFESTING<br></p></td>
 </tr>
 </tbody>
 </table>
-<h4 id="trueobjekttype-avvikkonsistens" class="discrete">Objekttype: AvvikKonsistens</h4>
-<h5 id="truemodellelementnavn-og-sosi_navn-4" class="discrete">Modellelementnavn og SOSI_navn</h5>
+<h4 id="trueobjekttype-avviklogiskkonsistens" class="discrete">Objekttype: AvvikLogiskKonsistens</h4>
+<h5 id="truemodellelementnavn-og-sosi_navn-5" class="discrete">Modellelementnavn og SOSI_navn</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 28.5714%;">
@@ -2302,6 +2548,18 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2347,15 +2605,15 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">avvikstypeKonsistens</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» AvvikstypeKonsistens</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">..KONSISTENS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avvikstypeLogiskKonsistens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">«CodeList» AvvikstypeLogiskKonsistens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">..LOGISK_KONSISTENS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 </tbody>
 </table>
 <h4 id="trueobjekttype-avvikstedfesting" class="discrete">Objekttype: AvvikStedfesting</h4>
-<h5 id="truemodellelementnavn-og-sosi_navn-5" class="discrete">Modellelementnavn og SOSI_navn</h5>
+<h5 id="truemodellelementnavn-og-sosi_navn-6" class="discrete">Modellelementnavn og SOSI_navn</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 28.5714%;">
@@ -2374,6 +2632,18 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
 </tr>
 <tr>
@@ -2487,7 +2757,7 @@ av denne lisensen og ikke kan viderebrukes</p>
 <div id="footer">
 <div id="footer-text">
 Versjon 1.0<br>
-Last updated 2022-05-18 14:54:37 +0200
+Last updated 2022-05-23 12:24:40 +0200
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
