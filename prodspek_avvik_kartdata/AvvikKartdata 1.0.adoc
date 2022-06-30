@@ -1,13 +1,13 @@
 :datasett: AvvikKartdata
 :versjon: 1.0
-:publisert: 2022-05-23
+:publisert: 2022-06-30
 :skjema-versjon: 1.0
 
 // All informasjon i hode over denne linja må fylles ut for hvert datasett. Linjene under settes av de gitte variablene over og i adoc_parametere.adoc
 include::../felles/adoc_parametere.adoc[]
 = SOSI produktspesifikasjon: {datasett}
 Geovekst
-{versjon}, 2022-05-20
+{versjon}, 2022-06-30
 
 include::../felles/dokument_metadata.adoc[]
 
@@ -19,7 +19,6 @@ include::../felles/dokument_metadata.adoc[]
 Produktspesifikasjon {datasett} {versjon} spesifiserer hvordan avvik på kartdata kan utveksles. Dette kan brukes både i forbindelse med kunde/leverandør-forhold i ulike typer kartleggingsprosjekter og i forbindelse med samarbeid om datakvalitet mellom ulike parter. 
 
 Produktspesifikasjonen definerer en dokumentert og enhetlig måte å utveklse informasjom om slike avvik på. Produktspesifikasjonen baserer seg på krav til dataene er satt i henhold til rammeverket definert av standarden Geodatakvalitet <<G>>, men kan også brukes til å utveksle andre typer avvik. Se <<Eksempler på koding av avvik etter denne produktspesifikasjonen>> i kapittel 12.1.
-
 
 Denne produktspesifikasjonen er utarbeidet iht. SOSI produktspesifikasjoner – Krav og godkjenning 5.0 <<SOSI-KRAV>>. UML-modellen som ligger til grunn for innhold i diagrammene og dokumentasjon i kap. 5, følger reglene i SOSI Regler for UML-modellering, versjon 5.1 <<SOSI-UML>>. http://sosi.geonorge.no/veiledere/UML[Denne veilederen] gir hjelp til å lese UML-diagrammene.
 
@@ -41,8 +40,7 @@ include::kap1.4.adoc[]
 
 == Definisjoner og forkortelser
 
-Denne produktspesifikasjonen baserer seg på definisjoner og forkortelser definert i Geodatakvalitet og FKB. Se http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkortelser[kapittel 5 i FKB Generell del 5.0].
-
+include::kap2.adoc[]
 
 
 <<<
@@ -56,13 +54,13 @@ Denne produktspesifikasjonen baserer seg på definisjoner og forkortelser define
 Tilbakemelding på avvik funnet i kartdata
 
 ==== Versjon
-5.0
+{versjon}
 
 === Referansedato
-2022-05-05
+2022-06-30
 
 === Ansvarlig organisasjon
-Geovekst
+Kartverket
 
 === Språk
 nor
@@ -103,7 +101,7 @@ Data ikke angitt
 
 == Spesifikasjonsomfang
 
-(Antall spesifikasjonsomfang: 2)
+(Antall spesifikasjonsomfang: 1)
 
 [[HeleDatasettet]]
 === Spesifikasjonsomfang for hele datasettet
