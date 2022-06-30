@@ -1,0 +1,37 @@
+! *   AvvikKartdata   Utvalgsdefinisjoner generert fra SOSI UML modell   30.06.2022 08:34:05   *!
+
+.GRUPPE-UTVALG AvvikFellesegenskaper
+..VELG "..OBJTYPE" = AvvikFellesegenskaper
+..BRUK-REGEL AvvikFellesegenskaper
+
+.GRUPPE-UTVALG KontrollGeodatakvalitet
+..VELG "..OBJTYPE" = KontrollGeodatakvalitet
+..BRUK-REGEL KontrollGeodatakvalitet
+
+.GRUPPE-UTVALG AvvikGenerell
+..VELG "..OBJTYPE" = AvvikGenerell
+..BRUK-REGEL AvvikGenerell
+
+.GRUPPE-UTVALG AvvikKonsistenskontroller
+..VELG "..OBJTYPE" = AvvikKonsistenskontroller
+..BRUK-REGEL AvvikKonsistenskontroller
+
+.GRUPPE-UTVALG AvvikFullstendighet
+..VELG "..OBJTYPE" = AvvikFullstendighet
+..BRUK-REGEL AvvikFullstendighet
+
+.GRUPPE-UTVALG AvvikEgenskapskvalitet
+..VELG "..OBJTYPE" = AvvikEgenskapskvalitet
+..BRUK-REGEL AvvikEgenskapskvalitet
+
+.GRUPPE-UTVALG AvvikLogiskKonsistens
+..VELG "..OBJTYPE" = AvvikLogiskKonsistens
+..BRUK-REGEL AvvikLogiskKonsistens
+
+.GRUPPE-UTVALG AvvikStedfesting
+..VELG "..OBJTYPE" = AvvikStedfesting
+..BRUK-REGEL AvvikStedfesting
+
+.GRUPPE-UTVALG Flateavgrensning
+..VELG "..OBJTYPE" = Flateavgrensning
+..BRUK-REGEL Flateavgrensning

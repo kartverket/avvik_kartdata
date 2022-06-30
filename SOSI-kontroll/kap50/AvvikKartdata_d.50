@@ -1,0 +1,60 @@
+! *   AvvikKartdata   Elementdefinisjoner generert fra SOSI UML modell   30.06.2022 08:34:05   *!
+
+
+! AvvikFellesegenskaper
+
+! KontrollGeodatakvalitet
+
+! AvvikGenerell
+
+! AvvikKonsistenskontroller
+
+! AvvikFullstendighet
+
+! AvvikEgenskapskvalitet
+
+! AvvikLogiskKonsistens
+
+! AvvikStedfesting
+
+.DEF
+..OBJTYPE T32
+
+.DEF
+..AVVIK_OBJEKTTYPE T
+
+.DEF
+..LINK T255
+
+.DEF
+..DATASETT T
+
+.DEF
+..OBJEKTPEKER T
+
+.DEF
+..INFORMASJON T
+
+.DEF
+..SIKKER_PÅVISNING BOOLSK
+
+.DEF
+..AVVIKSHÅNDTERING T
+
+.DEF
+..AVVK_BESKRIVELSE T
+
+.DEF
+..KONSISTENSKONTROLL T
+
+.DEF
+..FULLSTENDIGHET T
+
+.DEF
+..EGENSKAPSKVALITET T
+
+.DEF
+..LOGISK_KONSISTENS T
+
+.DEF
+..STEDFESTING T

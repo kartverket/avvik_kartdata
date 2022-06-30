@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:app="http://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" elementFormDefault="qualified" targetNamespace="http://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0" version="1.0">
+  <annotation>
+    <documentation>Datamodell for tilbakemelding på avvik i Kartdata. Omfatter både avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet og andre typer avvik i kartdata. Kan omfatte avvik internt i datasettet, avvik mellom kartdataene og terrenget eller avvik i forhold til et annet datasett. 
+Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjekter og i kommunikasjon om datakvalitet mellom ulike parter i et samarbeid - som f.eks. Geovekst.</documentation>
+  </annotation>
+  <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="http://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="AvvikEgenskapskvalitet" substitutionGroup="app:KontrollGeodatakvalitet" type="app:AvvikEgenskapskvalitetType">
+    <annotation>
+      <documentation>avvik innenfor kategorien Egenskapkvalitet.
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AvvikEgenskapskvalitetType">
+    <complexContent>
+      <extension base="app:KontrollGeodatakvalitetType">
+        <sequence>
+          <element name="avvikstypeEgenskapskvalitet" type="gml:CodeType">
+            <annotation>
+              <documentation>angir type avvik innenfor kategorien egenskapskvalitet (feilklassifisering e.l.)</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypeegenskapskvalitet</defaultCodeSpace>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">EGENSKAPSKVALITET</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikEgenskapskvalitetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikEgenskapskvalitet"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="AvvikFellesegenskaper" substitutionGroup="gml:AbstractFeature" type="app:AvvikFellesegenskaperType">
+    <annotation>
+      <documentation>abstrakt objekttype som inneholder felles egenskaper for alle typer tilbakemeldinger på avvik.</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AvvikFellesegenskaperType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element minOccurs="0" name="posisjon" type="gml:PointPropertyType">
+            <annotation>
+              <documentation>avvikets posisjon.
+
+Der avviket er knyttet til et eksisterende kartobjekt velges et representasjonspunkt for geometrien til dette objektet. Der avviket er knyttet til en mangel i dataene etableres et punkt som viser hvor mangelen er.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="utstrekning" type="gml:CurvePropertyType">
+            <annotation>
+              <documentation>avvikets utstrekning.
+
+Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="område" type="gml:SurfacePropertyType">
+            <annotation>
+              <documentation>avvikets område.
+
+Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.</documentation>
+            </annotation>
+          </element>
+          <element name="avvikObjekttype" type="string">
+            <annotation>
+              <documentation>hvilken objekttype avviket gjelder. 
+For veglenke eller andre typer generelle objekttyper kan det i stedet for objekttype brukes "typeveg" (eller ev. annen egenskap som beskriver objektet).</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVIK_OBJEKTTYPE</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="link" type="anyURI">
+            <annotation>
+              <documentation>Link til nettressurs med mer informasjon om avviket</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LINK</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="datasett" type="string">
+            <annotation>
+              <documentation>hvilket datasett avviket gjelder</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">DATASETT</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="objektpeker" type="string">
+            <annotation>
+              <documentation>referanse til hvilket objekt avviket gjelder der dette er mulig/hensiktsmessig å angi. Bruk lokalid eller ev. annen identifikasjon som identifiserer objektet unikt.</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">OBJEKTPEKER</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="informasjon" type="string">
+            <annotation>
+              <documentation>ekstra beskrivende eller forklarende tekst til avviket</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">INFORMASJON</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikFellesegenskaperPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikFellesegenskaper"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AvvikFullstendighet" substitutionGroup="app:KontrollGeodatakvalitet" type="app:AvvikFullstendighetType">
+    <annotation>
+      <documentation>avvik innenfor kvalitetskategorien Fullstendighet.
+
+Ved manglende fullstendighet angis et punkt der det manglende objektet burde finnes for å representere avviket. Ved overfullstendighet brukes det overskytende objektets geometri (eller ev. en forenklet utgave av denne) og det angis objektpeker til objektet.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AvvikFullstendighetType">
+    <complexContent>
+      <extension base="app:KontrollGeodatakvalitetType">
+        <sequence>
+          <element name="avvikstypeFullstendighet" type="gml:CodeType">
+            <annotation>
+              <documentation>angir type avvik innenfor kategorien fullstendighet (manglende objekt/overskytende objekt)</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypefullstendighet</defaultCodeSpace>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">FULLSTENDIGHET</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikFullstendighetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikFullstendighet"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AvvikGenerell" substitutionGroup="app:AvvikFellesegenskaper" type="app:AvvikGenerellType">
+    <annotation>
+      <documentation>avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikBeskrivelse og informasjon. 
+
+Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret/detaljert benyttes.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AvvikGenerellType">
+    <complexContent>
+      <extension base="app:AvvikFellesegenskaperType">
+        <sequence>
+          <element name="avvikBeskrivelse" type="string">
+            <annotation>
+              <documentation>Fritekst beskrivelse av type avvik. Kan i tillegg utfylles ved bruk av egenskapen informasjon.</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVK_BESKRIVELSE</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikGenerellPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikGenerell"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AvvikKonsistenskontroller" substitutionGroup="app:AvvikFellesegenskaper" type="app:AvvikKonsistenskontrollerType">
+    <annotation>
+      <documentation>avvik som beskriver manglende samsvar/konsistens mellom ulike objekter i et datasett, eller mellom datasett.
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AvvikKonsistenskontrollerType">
+    <complexContent>
+      <extension base="app:AvvikFellesegenskaperType">
+        <sequence>
+          <element name="avvikstype" type="gml:CodeType">
+            <annotation>
+              <documentation>egenskap som beskriver hva slags type konsistenskontroll er er kjørt for å finne avviket</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypekonsistenskontroller</defaultCodeSpace>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">KONSISTENSKONTROLL</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikKonsistenskontrollerPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikKonsistenskontroller"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AvvikLogiskKonsistens" substitutionGroup="app:KontrollGeodatakvalitet" type="app:AvvikLogiskKonsistensType">
+    <annotation>
+      <documentation>avvik innenfor kategorien Logisk konsistens.
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AvvikLogiskKonsistensType">
+    <complexContent>
+      <extension base="app:KontrollGeodatakvalitetType">
+        <sequence>
+          <element name="avvikstypeLogiskKonsistens" type="gml:CodeType">
+            <annotation>
+              <documentation>angir type avvik innenfor kategorien Logisk konsistens</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypelogiskkonsistens</defaultCodeSpace>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LOGISK_KONSISTENS</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikLogiskKonsistensPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikLogiskKonsistens"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AvvikStedfesting" substitutionGroup="app:KontrollGeodatakvalitet" type="app:AvvikStedfestingType">
+    <annotation>
+      <documentation>avvik innenfor kategorien Stedfestingsnøyaktighet (jf. Geodatakvalitet).
+
+Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfeldige avvik og sammenligne med de gitte kravene. Avvikene i enkeltavvikene i en slik kontroll egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan de enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.    
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AvvikStedfestingType">
+    <complexContent>
+      <extension base="app:KontrollGeodatakvalitetType">
+        <sequence>
+          <element name="avvikstypeStedfesting" type="gml:CodeType">
+            <annotation>
+              <documentation>angir type avvik innenfor kategorien stedfestingskvalitet</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikstypestedfesting</defaultCodeSpace>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">STEDFESTING</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvvikStedfestingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:AvvikStedfesting"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="KontrollGeodatakvalitet" substitutionGroup="app:AvvikFellesegenskaper" type="app:KontrollGeodatakvalitetType">
+    <annotation>
+      <documentation>abstrakt objekttype som inneholder felles egenskaper for alle typer tilbakemeldinger på avvik ihht rammeverket som er definert i standarden Geodatakvalitet.</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="KontrollGeodatakvalitetType">
+    <complexContent>
+      <extension base="app:AvvikFellesegenskaperType">
+        <sequence>
+          <element name="sikkerPåvisning" type="boolean">
+            <annotation>
+              <documentation>vurdering av om avviket er sikkert påvist</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">SIKKER_PÅVISNING</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="avvikshåndtering" type="gml:CodeType">
+            <annotation>
+              <documentation>hvordan avviket skal håndteres. Det vil i de fleste tilfeller si hvem som har ansvar for å rette avviket.</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://register.geonorge.no/sosi-kodelister/geodatakvalitet/avvikkartdata/avvikshandtering</defaultCodeSpace>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVIKSHÅNDTERING</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KontrollGeodatakvalitetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="app:KontrollGeodatakvalitet"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>
