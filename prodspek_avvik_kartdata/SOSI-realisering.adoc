@@ -15,17 +15,17 @@
 |posisjon
 |GM_Point
 |.PUNKT
-|[1..1]
+|[0..1]
  
 |utstrekning
 |GM_Curve
 |.KURVE
-|[1..1]
+|[0..1]
  
 |område
 |GM_Surface
 |.FLATE
-|[1..1]
+|[0..1]
  
 |avvikObjekttype
 |CharacterString
@@ -74,17 +74,17 @@
 |posisjon
 |GM_Point
 |.PUNKT
-|[1..1]
+|[0..1]
  
 |utstrekning
 |GM_Curve
 |.KURVE
-|[1..1]
+|[0..1]
  
 |område
 |GM_Surface
 |.FLATE
-|[1..1]
+|[0..1]
  
 |avvikObjekttype
 |CharacterString
@@ -133,17 +133,17 @@
 |posisjon
 |GM_Point
 |.PUNKT
-|[1..1]
+|[0..1]
  
 |utstrekning
 |GM_Curve
 |.KURVE
-|[1..1]
+|[0..1]
  
 |område
 |GM_Surface
 |.FLATE
-|[1..1]
+|[0..1]
  
 |avvikObjekttype
 |CharacterString
@@ -202,17 +202,17 @@
 |posisjon
 |GM_Point
 |.PUNKT
-|[1..1]
+|[0..1]
  
 |utstrekning
 |GM_Curve
 |.KURVE
-|[1..1]
+|[0..1]
  
 |område
 |GM_Surface
 |.FLATE
-|[1..1]
+|[0..1]
  
 |avvikObjekttype
 |CharacterString
@@ -271,17 +271,17 @@
 |posisjon
 |GM_Point
 |.PUNKT
-|[1..1]
+|[0..1]
  
 |utstrekning
 |GM_Curve
 |.KURVE
-|[1..1]
+|[0..1]
  
 |område
 |GM_Surface
 |.FLATE
-|[1..1]
+|[0..1]
  
 |avvikObjekttype
 |CharacterString
@@ -340,17 +340,17 @@
 |posisjon
 |GM_Point
 |.PUNKT
-|[1..1]
+|[0..1]
  
 |utstrekning
 |GM_Curve
 |.KURVE
-|[1..1]
+|[0..1]
  
 |område
 |GM_Surface
 |.FLATE
-|[1..1]
+|[0..1]
  
 |avvikObjekttype
 |CharacterString

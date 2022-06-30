@@ -11,7 +11,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 |"Contains deviations from control of geodata"@en
  
 |description
-|"Describes deviations from map control"@en
+|"Describes deviations on geodata"@en
  
 |designation
 |"Product spesification Kartkontroll 1.0"@en
@@ -80,7 +80,7 @@ image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagra
 Der avviket er knyttet til et eksisterende kartobjekt velges et representasjonspunkt for geometrien til dette objektet. Der avviket er knyttet til en mangel i dataene etableres et punkt som viser hvor mangelen er.
  
 |Multiplisitet: 
-|[1..1]
+|[0..1]
  
 |Type: 
 |http://skjema.geonorge.no/SOSI/basistype/GM_Point[GM_Point]
@@ -96,7 +96,7 @@ Der avviket er knyttet til et eksisterende kartobjekt velges et representasjonsp
 Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.
  
 |Multiplisitet: 
-|[1..1]
+|[0..1]
  
 |Type: 
 |http://skjema.geonorge.no/SOSI/basistype/GM_Curve[GM_Curve]
@@ -112,7 +112,7 @@ Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.
 Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.
  
 |Multiplisitet: 
-|[1..1]
+|[0..1]
  
 |Type: 
 |http://skjema.geonorge.no/SOSI/basistype/GM_Surface[GM_Surface]
@@ -293,6 +293,7 @@ SOSI_navn: AVVIKSHÅNDTERING +
 [[avvikgenerell]]
 ==== «FeatureType» AvvikGenerell
 *Definisjon:* avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikBeskrivelse og informasjon. 
+
 Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret/detaljert benyttes.
  
 [discrete]
@@ -329,6 +330,8 @@ SOSI_navn: AVVK_BESKRIVELSE +
 [[avvikkonsistenskontroller]]
 ==== «FeatureType» AvvikKonsistenskontroller
 *Definisjon:* avvik som beskriver manglende samsvar/konsistens mellom ulike objekter i et datasett, eller mellom datasett.
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.
  
 [discrete]
 ===== Egenskaper
@@ -366,7 +369,9 @@ SOSI_navn: KONSISTENSKONTROLL +
  
 [[avvikfullstendighet]]
 ==== «FeatureType» AvvikFullstendighet
-*Definisjon:* avvik innenfor kvalitetskategorien Fullstendighet
+*Definisjon:* avvik innenfor kvalitetskategorien Fullstendighet.
+
+Ved manglende fullstendighet angis et punkt der det manglende objektet burde finnes for å representere avviket. Ved overfullstendighet brukes det overskytende objektets geometri (eller ev. en forenklet utgave av denne) og det angis objektpeker til objektet.
  
 [discrete]
 ===== Egenskaper
@@ -404,7 +409,9 @@ SOSI_navn: FULLSTENDIGHET +
  
 [[avvikegenskapskvalitet]]
 ==== «FeatureType» AvvikEgenskapskvalitet
-*Definisjon:* avvik innenfor kategorien Egenskapkvalitet
+*Definisjon:* avvik innenfor kategorien Egenskapkvalitet.
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.
  
 [discrete]
 ===== Egenskaper
@@ -442,7 +449,10 @@ SOSI_navn: EGENSKAPSKVALITET +
  
 [[avviklogiskkonsistens]]
 ==== «FeatureType» AvvikLogiskKonsistens
-*Definisjon:* avvik innenfor kategorien Logisk konsistens
+*Definisjon:* avvik innenfor kategorien Logisk konsistens.
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.
+
  
 [discrete]
 ===== Egenskaper
@@ -482,7 +492,9 @@ SOSI_navn: LOGISK_KONSISTENS +
 ==== «FeatureType» AvvikStedfesting
 *Definisjon:* avvik innenfor kategorien Stedfestingsnøyaktighet (jf. Geodatakvalitet).
 
-Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfeldige avvik og sammenligne med de gitte kravene. Avvikene i enkeltavvikene i en slik kontroll egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan de enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.
+Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfeldige avvik og sammenligne med de gitte kravene. Avvikene i enkeltavvikene i en slik kontroll egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan de enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.    
+
+Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.
  
 [discrete]
 ===== Egenskaper
