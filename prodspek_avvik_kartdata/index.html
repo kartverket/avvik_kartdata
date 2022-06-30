@@ -443,7 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Geovekst</span><br>
 <span id="revnumber">versjon 1.0,</span>
-<span id="revdate">2022-05-20</span>
+<span id="revdate">2022-06-30</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
@@ -606,6 +606,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Dette er en test/høringsversjon av spesfikasjonen. Alle linker/ressurser vil ikke nødvendigvis virke eller ligge på "riktig" URL
+</td>
+</tr>
+</table>
+</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -613,19 +625,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0/AvvikKartdata_1.0.pdf">som PDF</a>.
+Dette dokumentet kan også lastes ned <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/AvvikKartdata_1.0.pdf">som PDF</a>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Publisert</strong>: 2022-05-23<br>
-<strong>Denne versjonen finnes på</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0" class="bare">https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0</a><br>
-- <a href="https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata/1.0">HTML-dokument</a><br>
+<p><strong>Publisert</strong>: 2022-06-30<br>
+<strong>Denne versjonen finnes på</strong>: <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0" class="bare">https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0</a><br>
+- <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0">HTML-dokument</a><br>
 - <a href="https://sosi.geonorge.no/uml-modeller/sosi-del-3-produktspesifikasjoner/AvvikKartdata/1.0">HTML-visning av UML-modellen</a><br>
-<strong>Nyeste versjon finnes på</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata" class="bare">https://sosi.geonorge.no/produktspesifikasjoner/AvvikKartdata</a><br>
-<strong>Faglig godkjent av</strong>: Geovekst<br>
-<strong>Formelt godkjent av</strong>: Kartverket<br></p>
+<strong>Nyeste versjon finnes på</strong>: <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata" class="bare">https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata</a><br>
+<strong>Faglig og formelt godkjent av</strong>: Kartverket<br></p>
 </div>
 </div>
 </div>
@@ -693,7 +704,194 @@ Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produkts
 <h2 id="truedefinisjoner-og-forkortelser"><a class="anchor" href="#truedefinisjoner-og-forkortelser"></a>2. Definisjoner og forkortelser</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Denne produktspesifikasjonen baserer seg på definisjoner og forkortelser definert i Geodatakvalitet og FKB. Se <a href="http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkortelser">kapittel 5 i FKB Generell del 5.0</a>.</p>
+<div class="title"><strong>ajourføring</strong></div>
+<p>korrigering av innholdet i geodataene slik at de fremstiller de faktiske forhold på et gitt tidspunkt, etter de retningslinjer som gjelder for innhold og kvalitet <a href="#PABG">[PABG]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>applikasjonsskjema</strong></div>
+<p>informasjonsmodellene i SOSI-modellregister er modellert som UML-modeller. UML-modellen for et FKB-datasett benevnes som et UML-applikasjonsskjema. Fra UML-applikasjonsskjema kan det automatisk genereres et GML-applikasjonsskjema som beskriver hvordan dataene representeres som GML <a href="#SOSI-UML">[SOSI-UML]</a>.</p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Se objektkatalog</p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Se <a href="http://sosi.geonorge.no/veiledere/UML">veileder for å lese UML-diagrammer</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>avledet datasett</strong></div>
+<p>bearbeidede primærdata tilpasset et bestemt bruksområde <a href="#FKB">[FKB]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Avledede data skal i prinsippet ikke ajourføres direkte, men ajourføringen skal komme gjennom automatisk utvelgelse og generalisering fra primærdata. I noen tilfeller vil dette være en for tung prosess slik at en må avvike fra hovedprinsippet. Kalles også generalisert datasett.</p>
+</div>
+<div class="paragraph">
+<p><em>EKSEMPEL</em>:	N5 Kartdata (avledet/generalisert produkt fra FKB-data).</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>basis geodata</strong></div>
+<p>Detaljerte geodata som beskriver det fysiske landskapet ved naturlige eller menneskeskapte objekter. Basisdata brukes til lokalisering og som underlag for temadata. <a href="#FKB">[FKB]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: basis geodata er synonymt med begrepet grunnkart (eller grunnkartdata)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>datasett</strong></div>
+<p>identifiserbar samling av beslektede data <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>egenskap</strong></div>
+<p>navngitt kjennetegn eller karakteristikk av et objekt</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>egenskapsnøyaktighet</strong></div>
+<p>uttrykk for hvor godt egenskapsdataene beskriver de aktuelle egenskapene <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>featuretype</strong></div>
+<p>UML-modellelement for å modellere geografiske objekttyper <a href="#SOSI-UML">[SOSI-UML]</a>.</p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Begrepet brukes i mange sammenhenger synonymt med objekttype. Se også <a href="http://sosi.geonorge.no/veiledere/UML">veileder for å lese UML-diagrammer</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>Fotogrammetrisk FKB</strong></div>
+<p>FKB-data som er etablert ved fotogrammetrisk kartlegging <a href="#FKB">[FKB]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: I Fotogrammetrisk FKB inngår også enkelte objekttyper som ikke registreres fotogrammetrisk. Eksempel er fiktive avgrensningslinjer og representasjonspunkt.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>grunnkart</strong></div>
+<p>Grunnkart er et begrep som er synonymt med basis geodata. Se definisjon under basis geodata.</p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Grunnkart brukes til flere formål og kan danne grunnlag for avledede kart i forskjellige målestokker. Grunnkartet skal være det kartgrunnlaget som skal tjene alle formål som omhandles i plan- og bygningsloven eller dens forskrifter.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>fullstendighet</strong></div>
+<p>uttrykk for i hvilken grad spesifiserte deler av et produkt finnes i det aktuelle datasettet <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Fullstendighet karakteriseres ved kvalitetsmålene manglende objekter, overskytende objekter (ønsket om fullstendige geodatabaser innebærer også at det er galt dersom det finnes objekter i databasene som ikke skal være der i henhold til spesifikasjonene) og manglende egenskaper.
+Fullstendighet kan angis i prosent i relasjon til spesifiserte krav. Informasjon om fullstendighet må være datert.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>geodata</strong></div>
+<p>stedfestet informasjon <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Geodata består av objektidentifikasjon og informasjon om stedfesting og egenskaper. Stedfestingsdataene på sin side kan omfatte både posisjonsdata og geometriske beskrivelsesdata.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>kart</strong></div>
+<p>generalisert avbildning av geografiske objekter med deres romlige relasjoner; med angitt geodetisk datum, projeksjon og koordinatsystem, samt målestokk dersom avbildningen er analog <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>kartdata</strong></div>
+<p>geodata tilrettelagt for presentasjon av kart <a href="#PABG">[PABG]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>kontinuerlig ajourhold</strong></div>
+<p>fortløpende ajourføring basert på rapportering fra forvaltningsrutiner, daglige arbeidsrutiner og samarbeidsparter <a href="#PABG">[PABG]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Kalles også administrativt vedlikehold. Data som samles inn administrativt, kan være digitale stikningsdata eller data fra sluttkontroll av beliggenhet, markmålte bygninger, senterpunkt bygning, situasjonsplan og melding om landbruksbygg.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>kvalitet</strong></div>
+<p>i hvilken grad en samling av iboende egenskaper oppfyller krav <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Se standarden Geodatakvalitet for en nærmere beskrivelse av datakvalitet.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>logisk konsistens</strong></div>
+<p>hvor godt regler som finnes i spesifikasjonene er oppfylt <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Logisk konsistens betegner sammenhengen mellom produktet og reglene produktet skal oppfylle. Logisk konsistens kan altså måles uten at en kjenner noen "fasit".</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>metadata</strong></div>
+<p>informasjon som beskriver et datasett <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Hvilke opplysninger som inngår i metadataene, kan variere avhengig av datasettets karakter. Vanlige opplysninger er innhold, kvalitet, tilstand, struktur, format, produsent og vedlikeholdsansvar.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>nøyaktighet</strong></div>
+<p>mål for en estimert verdis nærhet til sin sanne verdi eller til det man antar er den sanne verdi <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: I standarden Geodatakvalitet er de ulike nøyaktighetsmålene beskrevet.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>objekt</strong></div>
+<p>forekomst (instans) av en objekttype <a href="#SOSI-UML">[SOSI-UML]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>objektkatalog</strong></div>
+<p>definisjon og beskrivelse av objekttyper, objektegenskaper samt relasjoner mellom objekter, sammen med eventuelle funksjoner som er anvendt for objektet. <a href="#SOSI-UML">[SOSI-UML]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>objekttype</strong></div>
+<p>geografisk objekttype er en klasse av objekter med felles egenskaper, forholdet mot andre objekttyper og funksjoner <a href="#SOSI-UML">[SOSI-UML]</a></p>
+</div>
+<div class="paragraph">
+<p><em>EKSEMPEL</em>: Eksempler på objekttyper er Takkant, Arealbruksgrense og Mønelinje.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>områdetype</strong></div>
+<p>arealinndeling basert på krav til detaljering/nøyaktighet av basis geodata i området <a href="#FKB">[FKB]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: I FKB brukes områdetypen til å si noe om hvilken FKB-standard som bør velges i området. Områdetype brukes også som styrende for krav i standardene "Plassering og beliggenhetskontroll" og "Stedfesting av matrikkelenhets- og råderettsgrenser".</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>oppgradering</strong></div>
+<p>forbedring av den datatekniske kvaliteten av eksisterende data <a href="#PABG">[PABG]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>periodisk ajourhold</strong></div>
+<p>ajourføring som utføres systematisk med jevne mellomrom <a href="#PABG">[PABG]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Ved periodisk ajourføring blir eksisterende data, enten de har vært gjennom kontinuerlig ajourføring eller ei, kontrollert og evt. forbedret, og manglende objekter blir supplert. Objekter som ikke er endret, blir ikke kartlagt på nytt. Etter periodisk ajourføring skal datasettene minimum tilfredsstille kvalitetskravene for den valgte FKB-standard i området. Det kan være nødvendig også med en oppgradering for å oppfylle kvalitetskravene. Periodisk ajourføring gjøres vanligvis ved fotogrammetri.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>presentasjonsdata</strong></div>
+<p>tilleggsdata til FKB som er nødvendige for å formidle en god presentasjon uten at de opprinnelige datasettene blir berørt <a href="#FKB">[FKB]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Presentasjonsdata lages for presentasjoner i ulike målestokker. Det genereres presentasjonsdata for å ha mulighet til blant annet å redigere, avblende/slette, skrive om eller flytte tekster og symboler i kartbildet, uten at datasettene blir berørt.</p>
+</div>
+<div class="paragraph">
+<p><em>EKSEMPEL</em>:	Eksempler på presentasjonsdata er tekstdata generert fra datasett der tekst, tall eller symboler er ferdig plassert i kartbildet. En annen type presentasjonsdata er avblendingspolygoner som brukes til å fjerne unødig mye data i et aktuelt kartbilde.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>primærdatasett</strong></div>
+<p>et definert geodatasett som består av de mest detaljerte og nøyaktige data innen et definert område, har en viss utbredelse og jevnlig blir produsert og/eller ajourholdt <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: Primærdatasett skal være presentasjons- og produktuavhengige. De skal kunne danne utgangspunkt for forskjellig bruk og forskjellige produkter. Det er derfor krav om en viss utbredelse og produksjon før en kan kalle et datasett for primærdatasett. Primærdatasett er i prinsippet uavhengige datasett (ikke avledet fra andre datasett) og ajourholdes uavhengig av andre datasett. Et objekt tilhører bare ett primærdatasett.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>produktspesifikasjon</strong></div>
+<p>detaljert beskrivelse av ett datasett eller en serie med datasett med tilleggsinformasjon som gjør det mulig å produsere, distribuere og bruke datasettet av andre (tredjepart) <a href="#SOSI-KRAV">[SOSI-KRAV]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: En dataproduktspesifikasjon kan lages for produksjon, salg, sluttbrukervirksomhet eller annet.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>standardavvik</strong></div>
+<p>statistisk størrelse som angir spredningen for en gruppe måle- eller beregningsverdier i forhold til deres sanne eller estimerte verdier <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>topologi</strong></div>
+<p>beskrivelse av sammenhengen mellom geografiske objekter <a href="#G">[G]</a></p>
+</div>
+<div class="paragraph">
+<p><em>MERKNAD</em>: De aktuelle objektene har ofte en fysisk sammenheng. Topologi er de av objektenes egenskaper som overlever det som er kalt kontinuerlige transformasjoner (også kalt gummiduk-transformasjoner). Alle tallverdier (lengder, arealer og retninger) kan bli forandret, mens for eksempel naboskapsforhold vil være uendret.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -715,20 +913,20 @@ Dette dokumentet kan også lastes ned <a href="https://sosi.geonorge.no/produkts
 <div class="sect3">
 <h4 id="trueversjon"><a class="anchor" href="#trueversjon"></a>3.1.2. Versjon</h4>
 <div class="paragraph">
-<p>5.0</p>
+<p>1.0</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="truereferansedato"><a class="anchor" href="#truereferansedato"></a>3.2. Referansedato</h3>
 <div class="paragraph">
-<p>2022-05-05</p>
+<p>2022-06-30</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="trueansvarlig-organisasjon"><a class="anchor" href="#trueansvarlig-organisasjon"></a>3.3. Ansvarlig organisasjon</h3>
 <div class="paragraph">
-<p>Geovekst</p>
+<p>Kartverket</p>
 </div>
 </div>
 <div class="sect2">
@@ -824,7 +1022,7 @@ Ikke angitt</p>
 <h2 id="truespesifikasjonsomfang"><a class="anchor" href="#truespesifikasjonsomfang"></a>4. Spesifikasjonsomfang</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(Antall spesifikasjonsomfang: 2)</p>
+<p>(Antall spesifikasjonsomfang: 1)</p>
 </div>
 <div class="sect2">
 <h3 id="HeleDatasettet"><a class="anchor" href="#HeleDatasettet"></a>4.1. Spesifikasjonsomfang for hele datasettet</h3>
@@ -906,7 +1104,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Describes deviations from map control"@en</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Describes deviations on geodata"@en</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">designation</p></td>
@@ -996,7 +1194,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
@@ -1021,7 +1219,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
@@ -1046,7 +1244,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
@@ -1321,8 +1519,10 @@ SOSI_navn: AVVIKSHÅNDTERING<br></p></td>
 <div class="sect3">
 <h4 id="avvikgenerell"><a class="anchor" href="#avvikgenerell"></a>5.2.3. «FeatureType» AvvikGenerell</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikBeskrivelse og informasjon.
-Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret/detaljert benyttes.</p>
+<p><strong>Definisjon:</strong> avvik i kartdataene som ikke lar seg beskrive med en av de andre avvikstypene. Hva avviket går ut på må defineres i egenskapene avvikBeskrivelse og informasjon.</p>
+</div>
+<div class="paragraph">
+<p>Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret/detaljert benyttes.</p>
 </div>
 <h5 id="trueegenskaper-3" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1372,6 +1572,9 @@ Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret
 <h4 id="avvikkonsistenskontroller"><a class="anchor" href="#avvikkonsistenskontroller"></a>5.2.4. «FeatureType» AvvikKonsistenskontroller</h4>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> avvik som beskriver manglende samsvar/konsistens mellom ulike objekter i et datasett, eller mellom datasett.</p>
+</div>
+<div class="paragraph">
+<p>Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</p>
 </div>
 <h5 id="trueegenskaper-4" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1423,7 +1626,10 @@ SOSI_navn: KONSISTENSKONTROLL<br></p></td>
 <div class="sect3">
 <h4 id="avvikfullstendighet"><a class="anchor" href="#avvikfullstendighet"></a>5.2.5. «FeatureType» AvvikFullstendighet</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> avvik innenfor kvalitetskategorien Fullstendighet</p>
+<p><strong>Definisjon:</strong> avvik innenfor kvalitetskategorien Fullstendighet.</p>
+</div>
+<div class="paragraph">
+<p>Ved manglende fullstendighet angis et punkt der det manglende objektet burde finnes for å representere avviket. Ved overfullstendighet brukes det overskytende objektets geometri (eller ev. en forenklet utgave av denne) og det angis objektpeker til objektet.</p>
 </div>
 <h5 id="trueegenskaper-5" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1475,7 +1681,10 @@ SOSI_navn: FULLSTENDIGHET<br></p></td>
 <div class="sect3">
 <h4 id="avvikegenskapskvalitet"><a class="anchor" href="#avvikegenskapskvalitet"></a>5.2.6. «FeatureType» AvvikEgenskapskvalitet</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> avvik innenfor kategorien Egenskapkvalitet</p>
+<p><strong>Definisjon:</strong> avvik innenfor kategorien Egenskapkvalitet.</p>
+</div>
+<div class="paragraph">
+<p>Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</p>
 </div>
 <h5 id="trueegenskaper-6" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1527,7 +1736,10 @@ SOSI_navn: EGENSKAPSKVALITET<br></p></td>
 <div class="sect3">
 <h4 id="avviklogiskkonsistens"><a class="anchor" href="#avviklogiskkonsistens"></a>5.2.7. «FeatureType» AvvikLogiskKonsistens</h4>
 <div class="paragraph">
-<p><strong>Definisjon:</strong> avvik innenfor kategorien Logisk konsistens</p>
+<p><strong>Definisjon:</strong> avvik innenfor kategorien Logisk konsistens.</p>
+</div>
+<div class="paragraph">
+<p>Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</p>
 </div>
 <h5 id="trueegenskaper-7" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1583,6 +1795,9 @@ SOSI_navn: LOGISK_KONSISTENS<br></p></td>
 </div>
 <div class="paragraph">
 <p>Krav til stedfesting gjøres ved at det stilles krav til maksimalt systematisk avvik, maksimalt tilfeldig avvik og andel grove feil. Ved kontroll av stedfestingsnøyaktighet sammenlignes dataene med en fasit slik at man kan regne ut systematiske og tilfeldige avvik og sammenligne med de gitte kravene. Avvikene i enkeltavvikene i en slik kontroll egner seg ikke for utveksling av avvik etter denne produktspesifikasjonen. Imidlertid kan de enkelte grovfeilene dokumenteres/utveklses ved bruk av denne spesifikasjonen.</p>
+</div>
+<div class="paragraph">
+<p>Geometrien for objektet avviket er knyttet til (eller en forenklet utgave av denne) brukes som geometri for avviket. Objektpeker til objektet angis.</p>
 </div>
 <h5 id="trueegenskaper-8" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -2198,13 +2413,13 @@ SOSI_navn: STEDFESTING<br></p></td>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0/AvvikKartdata.xsd">GML-skjema</a></p>
+<p><a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/AvvikKartdata.xsd">GML-skjema</a></p>
 </li>
 <li>
-<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0/AvvikKartdata.sch">Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil</a> (sch-fil)</p>
+<p><a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/AvvikKartdata.sch">Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil</a> (sch-fil)</p>
 </li>
 <li>
-<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0/eksempel/">Katalog med eksempelfiler</a></p>
+<p><a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/eksempel/">Katalog med eksempelfiler</a></p>
 </li>
 </ul>
 </div>
@@ -2214,7 +2429,7 @@ SOSI_navn: STEDFESTING<br></p></td>
 <h2 id="truesosi-format-realisering"><a class="anchor" href="#truesosi-format-realisering"></a>Vedlegg B: SOSI-format-realisering</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <a href="#SOSI-FORMAT">[SOSI-FORMAT]</a>. Under en utlisting av SOSI-formatrealiseringen:</p>
+<p>SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <a href="#SOSI-FORMAT">[SOSI-FORMAT]</a>. SOSI-kontroll definisjonsfiler finnes på <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/SOSI-kontroll/">egen katalog</a>. Under en utlisting av SOSI-formatrealiseringen:</p>
 </div>
 <h4 id="trueobjekttype-avvikgenerell" class="discrete">Objekttype: AvvikGenerell</h4>
 <h5 id="truemodellelementnavn-og-sosi_navn" class="discrete">Modellelementnavn og SOSI_navn</h5>
@@ -2236,19 +2451,19 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
@@ -2308,19 +2523,19 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
@@ -2380,19 +2595,19 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
@@ -2464,19 +2679,19 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
@@ -2548,19 +2763,19 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
@@ -2632,19 +2847,19 @@ SOSI_navn: STEDFESTING<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">posisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.PUNKT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">utstrekning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.KURVE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">område</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.FLATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avvikObjekttype</p></td>
@@ -2757,7 +2972,7 @@ av denne lisensen og ikke kan viderebrukes</p>
 <div id="footer">
 <div id="footer-text">
 Versjon 1.0<br>
-Last updated 2022-05-23 12:24:40 +0200
+Last updated 2022-06-30 09:06:58 +0200
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">

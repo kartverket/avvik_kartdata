@@ -212,7 +212,7 @@ GML-realiseringen følger kravene i "Realisering i GML-format 5.0" <<SOSI-GML>>.
 [appendix]
 == SOSI-format-realisering
 
-SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <<SOSI-FORMAT>>. Under en utlisting av SOSI-formatrealiseringen:
+SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <<SOSI-FORMAT>>. SOSI-kontroll definisjonsfiler finnes på link:{skjema-url}/SOSI-kontroll/[egen katalog]. Under en utlisting av SOSI-formatrealiseringen:
 
 include::SOSI-realisering.adoc[]
 
