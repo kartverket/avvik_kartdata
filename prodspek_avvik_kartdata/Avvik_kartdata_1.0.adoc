@@ -16,7 +16,7 @@ include::../felles/dokument_metadata.adoc[]
 
 === Innledning
 
-Produktspesifikasjon {datasett} {versjon} spesifiserer hvordan avvik på kartdata kan utveksles. Dette kan brukes både i forbindelse med kunde/leverandør-forhold i ulike typer kartleggingsprosjekter og i forbindelse med samarbeid om datakvalitet mellom ulike parter. 
+Produktspesifikasjon {datasett} {versjon} spesifiserer hvordan avvik på kartdata kan utveksles. Produktspesifikasjonen kan brukes til å utveksle informasjon om avvik mellom to forskjellige versjoner av samme datasett og mellom et bestemt kartdatasett og virkeligheten. Dette kan brukes både i forbindelse med kunde/leverandør-forhold i ulike typer kartleggingsprosjekter og i forbindelse med samarbeid om datakvalitet mellom ulike parter. 
 
 Produktspesifikasjonen definerer en dokumentert og enhetlig måte å utveklse informasjom om slike avvik på. Produktspesifikasjonen baserer seg på krav til dataene er satt i henhold til rammeverket definert av standarden Geodatakvalitet <<G>>, men kan også brukes til å utveksle andre typer avvik. Produktspesifikasjonen definerer _ikke_ hva som defineres som et avvik og hvordan slik slik avvik kan avdekkes. Se <<Eksempler på koding av avvik etter denne produktspesifikasjonen>> i kapittel 12.1.
 
@@ -55,7 +55,7 @@ http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkort
 {datasett}
 
 ==== Fullstendig navn
-Tilbakemelding på avvik funnet i kartdata
+Tilbakemelding på avvik i kartdata
 
 ==== Versjon
 {versjon}
