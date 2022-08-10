@@ -27,20 +27,20 @@
 |.FLATE
 |[0..1]
  
+|avvikId
+|CharacterString
+|..AVVIKID
+|[0..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
  
-|link
-|URI
-|..LINK
-|[0..1]
- 
 |datasett
 |CharacterString
 |..DATASETT
-|[0..1]
+|[1..1]
  
 |objektpeker
 |CharacterString
@@ -50,6 +50,11 @@
 |informasjon
 |CharacterString
 |..INFORMASJON
+|[0..1]
+ 
+|link
+|URI
+|..LINK
 |[0..1]
  
 |avvikBeskrivelse
@@ -86,20 +91,20 @@
 |.FLATE
 |[0..1]
  
+|avvikId
+|CharacterString
+|..AVVIKID
+|[0..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
  
-|link
-|URI
-|..LINK
-|[0..1]
- 
 |datasett
 |CharacterString
 |..DATASETT
-|[0..1]
+|[1..1]
  
 |objektpeker
 |CharacterString
@@ -109,6 +114,11 @@
 |informasjon
 |CharacterString
 |..INFORMASJON
+|[0..1]
+ 
+|link
+|URI
+|..LINK
 |[0..1]
  
 |avvikstype
@@ -145,20 +155,20 @@
 |.FLATE
 |[0..1]
  
+|avvikId
+|CharacterString
+|..AVVIKID
+|[0..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
  
-|link
-|URI
-|..LINK
-|[0..1]
- 
 |datasett
 |CharacterString
 |..DATASETT
-|[0..1]
+|[1..1]
  
 |objektpeker
 |CharacterString
@@ -168,6 +178,11 @@
 |informasjon
 |CharacterString
 |..INFORMASJON
+|[0..1]
+ 
+|link
+|URI
+|..LINK
 |[0..1]
  
 |sikkerPåvisning
@@ -214,20 +229,20 @@
 |.FLATE
 |[0..1]
  
+|avvikId
+|CharacterString
+|..AVVIKID
+|[0..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
  
-|link
-|URI
-|..LINK
-|[0..1]
- 
 |datasett
 |CharacterString
 |..DATASETT
-|[0..1]
+|[1..1]
  
 |objektpeker
 |CharacterString
@@ -237,6 +252,11 @@
 |informasjon
 |CharacterString
 |..INFORMASJON
+|[0..1]
+ 
+|link
+|URI
+|..LINK
 |[0..1]
  
 |sikkerPåvisning
@@ -283,20 +303,20 @@
 |.FLATE
 |[0..1]
  
+|avvikId
+|CharacterString
+|..AVVIKID
+|[0..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
  
-|link
-|URI
-|..LINK
-|[0..1]
- 
 |datasett
 |CharacterString
 |..DATASETT
-|[0..1]
+|[1..1]
  
 |objektpeker
 |CharacterString
@@ -306,6 +326,11 @@
 |informasjon
 |CharacterString
 |..INFORMASJON
+|[0..1]
+ 
+|link
+|URI
+|..LINK
 |[0..1]
  
 |sikkerPåvisning
@@ -352,20 +377,20 @@
 |.FLATE
 |[0..1]
  
+|avvikId
+|CharacterString
+|..AVVIKID
+|[0..1]
+ 
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
  
-|link
-|URI
-|..LINK
-|[0..1]
- 
 |datasett
 |CharacterString
 |..DATASETT
-|[0..1]
+|[1..1]
  
 |objektpeker
 |CharacterString
@@ -375,6 +400,11 @@
 |informasjon
 |CharacterString
 |..INFORMASJON
+|[0..1]
+ 
+|link
+|URI
+|..LINK
 |[0..1]
  
 |sikkerPåvisning

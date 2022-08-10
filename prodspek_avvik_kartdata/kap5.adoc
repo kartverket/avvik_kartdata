@@ -1,6 +1,6 @@
 // Start of UML-model
-=== Pakke: «ApplicationSchema» AvvikKartdata 1.0
-*Definisjon:* Datamodell for tilbakemelding på avvik i Kartdata. Omfatter både avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet og andre typer avvik i kartdata. Kan omfatte avvik internt i datasettet, avvik mellom kartdataene og terrenget eller avvik i forhold til et annet datasett. 
+=== Pakke: «ApplicationSchema» Avvik kartdata 1.0 - Utkast
+*Definisjon:* Datamodell for tilbakemelding på avvik i kartdata. Omfatter både avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet og andre typer avvik i kartdata. Kan omfatte avvik internt i datasettet, avvik mellom kartdataene og terrenget eller avvik i forhold til et annet datasett. 
 Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjekter og i kommunikasjon om datakvalitet mellom ulike parter i et samarbeid - som f.eks. Geovekst.
  
 [discrete]
@@ -14,7 +14,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 |"Describes deviations on geodata"@en
  
 |designation
-|"Product spesification Kartkontroll 1.0"@en
+|"Product spesification Avvik kartdata 1.0"@en
  
 |language
 |no
@@ -58,8 +58,8 @@ image::diagrammer/Oversiktsdiagram.png[link=diagrammer/Oversiktsdiagram.png, alt
  
 '''
  
-.Hoveddiagram 
-image::diagrammer/Hoveddiagram.png[link=diagrammer/Hoveddiagram.png, alt="Diagram med navn Hoveddiagram som viser UML-klasser beskrevet i teksten nedenfor."]
+.Hoveddiagram Avvik kartdata 
+image::diagrammer/Hoveddiagram Avvik kartdata.png[link=diagrammer/Hoveddiagram Avvik kartdata.png, alt="Diagram med navn Hoveddiagram Avvik kartdata som viser UML-klasser beskrevet i teksten nedenfor."]
  
 '''
  
@@ -120,11 +120,30 @@ Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.
 [cols="20,80"]
 |===
 |*Navn:* 
+|*avvikId*
+ 
+|Definisjon: 
+|Unik identifikasjon av avviket innenfor datasettet i form av et nummer e.l. Unik identifikasjon av det enkelte avvik vil gjøre det lettere å kommunisere om de enkelte avvikene og er spesielt nyttig der avvikene ikke knytter seg til unikt identifiserbare kartobjekter.
+ 
+|Multiplisitet: 
+|[0..1]
+ 
+|Type: 
+|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
+|Profilparametre i tagged values: 
+|
+SOSI_datatype: 255 + 
+SOSI_lengde: 255 + 
+SOSI_navn: AVVIKID + 
+|===
+[cols="20,80"]
+|===
+|*Navn:* 
 |*avvikObjekttype*
  
 |Definisjon: 
 |hvilken objekttype avviket gjelder. 
-For veglenke eller andre typer generelle objekttyper kan det i stedet for objekttype brukes "typeveg" (eller ev. annen egenskap som beskriver objektet).
+For veglenke eller andre typer generelle objekttyper bør den klassifiserende egenskapen angis i tillegg til objekttypen. F.eks. "Veglenke - sti" eller "Veglenke - enkelBilveg".
  
 |Multiplisitet: 
 |[1..1]
@@ -133,7 +152,66 @@ For veglenke eller andre typer generelle objekttyper kan det i stedet for objekt
 |http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
 |Profilparametre i tagged values: 
 |
+SOSI_datatype: T + 
+SOSI_lengde: 255 + 
 SOSI_navn: AVVIK_OBJEKTTYPE + 
+|===
+[cols="20,80"]
+|===
+|*Navn:* 
+|*datasett*
+ 
+|Definisjon: 
+|hvilket datasett avviket gjelder
+ 
+|Multiplisitet: 
+|[1..1]
+ 
+|Type: 
+|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
+|Profilparametre i tagged values: 
+|
+SOSI_datatype: T + 
+SOSI_lengde: 255 + 
+SOSI_navn: DATASETT + 
+|===
+[cols="20,80"]
+|===
+|*Navn:* 
+|*objektpeker*
+ 
+|Definisjon: 
+|referanse til hvilket objekt avviket gjelder der dette er mulig/hensiktsmessig å angi. Bruk lokalid eller ev. annen identifikasjon som identifiserer objektet unikt.
+ 
+|Multiplisitet: 
+|[0..1]
+ 
+|Type: 
+|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
+|Profilparametre i tagged values: 
+|
+SOSI_datatype: T + 
+SOSI_lengde: 255 + 
+SOSI_navn: OBJEKTPEKER + 
+|===
+[cols="20,80"]
+|===
+|*Navn:* 
+|*informasjon*
+ 
+|Definisjon: 
+|ekstra beskrivende eller forklarende tekst til avviket
+ 
+|Multiplisitet: 
+|[0..1]
+ 
+|Type: 
+|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
+|Profilparametre i tagged values: 
+|
+SOSI_datatype: T + 
+SOSI_lengde: 255 + 
+SOSI_navn: INFORMASJON + 
 |===
 [cols="20,80"]
 |===
@@ -153,57 +231,6 @@ SOSI_navn: AVVIK_OBJEKTTYPE +
 SOSI_datatype: T + 
 SOSI_lengde: 255 + 
 SOSI_navn: LINK + 
-|===
-[cols="20,80"]
-|===
-|*Navn:* 
-|*datasett*
- 
-|Definisjon: 
-|hvilket datasett avviket gjelder
- 
-|Multiplisitet: 
-|[0..1]
- 
-|Type: 
-|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
-|Profilparametre i tagged values: 
-|
-SOSI_navn: DATASETT + 
-|===
-[cols="20,80"]
-|===
-|*Navn:* 
-|*objektpeker*
- 
-|Definisjon: 
-|referanse til hvilket objekt avviket gjelder der dette er mulig/hensiktsmessig å angi. Bruk lokalid eller ev. annen identifikasjon som identifiserer objektet unikt.
- 
-|Multiplisitet: 
-|[0..1]
- 
-|Type: 
-|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
-|Profilparametre i tagged values: 
-|
-SOSI_navn: OBJEKTPEKER + 
-|===
-[cols="20,80"]
-|===
-|*Navn:* 
-|*informasjon*
- 
-|Definisjon: 
-|ekstra beskrivende eller forklarende tekst til avviket
- 
-|Multiplisitet: 
-|[0..1]
- 
-|Type: 
-|http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
-|Profilparametre i tagged values: 
-|
-SOSI_navn: INFORMASJON + 
 |===
  
 [discrete]
@@ -313,6 +340,8 @@ Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret
 |http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
 |Profilparametre i tagged values: 
 |
+SOSI_datatype: T + 
+SOSI_lengde: 255 + 
 SOSI_navn: AVVK_BESKRIVELSE + 
 |===
  
@@ -547,6 +576,9 @@ SOSI_navn: STEDFESTING +
 |SOSI_datatype
 |T
  
+|SOSI_lengde
+|30
+ 
 |SOSI_navn
 |AVVIKSHÅNDTERING
  
@@ -570,6 +602,9 @@ SOSI_navn: STEDFESTING +
  
 |SOSI_datatype
 |T
+ 
+|SOSI_lengde
+|30
  
 |SOSI_navn
 |FULLSTENDIGHET
@@ -595,6 +630,9 @@ SOSI_navn: STEDFESTING +
 |SOSI_datatype
 |T
  
+|SOSI_lengde
+|30
+ 
 |SOSI_navn
 |EGENSKAPSKVALITET
  
@@ -619,6 +657,9 @@ SOSI_navn: STEDFESTING +
 |SOSI_datatype
 |T
  
+|SOSI_lengde
+|30
+ 
 |SOSI_navn
 |KONSISTENSKONTROLL
  
@@ -642,6 +683,9 @@ SOSI_navn: STEDFESTING +
  
 |SOSI_datatype
 |T
+ 
+|SOSI_lengde
+|30
  
 |SOSI_navn
 |LOGISK_KONSISTENS
@@ -668,7 +712,7 @@ SOSI_navn: STEDFESTING +
 |T
  
 |SOSI_lengde
-|255
+|30
  
 |SOSI_navn
 |STEDFESTING
