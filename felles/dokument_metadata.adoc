@@ -6,12 +6,12 @@ ifeval::["{backend}" == "html5"]
 Dette er en test/høringsversjon av spesfikasjonen. Alle linker/ressurser vil ikke nødvendigvis virke eller ligge på "riktig" URL
 
 [TIP]
-Dette dokumentet kan også lastes ned link:{prodspek-url}/{versjon}/{datasett}_{versjon}.pdf[som PDF].
+Dette dokumentet kan også lastes ned link:{prodspek-url}/{versjon}/Avvik_kartdata_{versjon}.pdf[som PDF].
 
 *Publisert*: {publisert} +
 *Denne versjonen finnes på*: {prodspek-url}/{versjon} +
 - {prodspek-url}/{versjon}[HTML-dokument] +
-- {uml-url}[HTML-visning av UML-modellen] +
+// - {uml-url}[HTML-visning av UML-modellen] +
 *Nyeste versjon finnes på*: {prodspek-url} +
 *Faglig og formelt godkjent av*: Kartverket +
 
@@ -31,8 +31,8 @@ Dette er en test/høringsversjon av spesfikasjonen. Alle linker/ressurser vil ik
 *Publisert*: {publisert} +
 *Denne versjonen finnes på*: {prodspek-url}/{versjon} +
 - {prodspek-url}/{versjon}[HTML-dokument] +
-- {prodspek-url}/{versjon}/{datasett}_5.0.pdf[PDF-dokument] +
-- {uml-url}[HTML-visning av UML-modellen] +
+- {prodspek-url}/{versjon}/Avvik_kartdata_{versjon}.pdf[PDF-dokument] +
+// - {uml-url}[HTML-visning av UML-modellen] +
 *Nyeste versjon finnes på*: {prodspek-url} +
 *Faglig og formelt godkjent av*: Kartverket +
 

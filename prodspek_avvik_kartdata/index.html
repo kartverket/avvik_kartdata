@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.8.dev">
-<meta name="author" content="Geovekst">
+<meta name="author" content="Kartverket">
 <title>SOSI produktspesifikasjon: Avvik kartdata</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>SOSI produktspesifikasjon: Avvik kartdata</h1>
 <div class="details">
-<span id="author" class="author">Geovekst</span><br>
+<span id="author" class="author">Kartverket</span><br>
 <span id="revnumber">versjon 1.0,</span>
 <span id="revdate">2022-08-15</span>
 </div>
@@ -602,6 +602,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#trueeksempler-på-avvik-funnet-ved-kontroll-av-fkb-data-fra-kartleggingsfirma">Eksempler på avvik funnet ved kontroll av FKB-data fra kartleggingsfirma</a></li>
 <li><a href="#trueeksempler-på-avvik-funnet-ved-konsistenskontroll-av-fkb-data">Eksempler på avvik funnet ved konsistenskontroll av FKB-data</a></li>
+<li><a href="#trueeksempelfiler">Eksempelfiler</a></li>
 </ul>
 </li>
 </ul>
@@ -631,7 +632,7 @@ Dette er en test/høringsversjon av spesfikasjonen. Alle linker/ressurser vil ik
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Dette dokumentet kan også lastes ned <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/AvvikKartdata_1.0.pdf">som PDF</a>.
+Dette dokumentet kan også lastes ned <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/Avvik_kartdata_1.0.pdf">som PDF</a>.
 </td>
 </tr>
 </table>
@@ -640,7 +641,6 @@ Dette dokumentet kan også lastes ned <a href="https://skjema.geonorge.no/SOSITE
 <p><strong>Publisert</strong>: 2022-08-15<br>
 <strong>Denne versjonen finnes på</strong>: <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0" class="bare">https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0</a><br>
 - <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0">HTML-dokument</a><br>
-- <a href="https://sosi.geonorge.no/uml-modeller/sosi-del-3-produktspesifikasjoner/AvvikKartdata/1.0">HTML-visning av UML-modellen</a><br>
 <strong>Nyeste versjon finnes på</strong>: <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata" class="bare">https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata</a><br>
 <strong>Faglig og formelt godkjent av</strong>: Kartverket<br></p>
 </div>
@@ -664,7 +664,7 @@ Dette dokumentet kan også lastes ned <a href="https://skjema.geonorge.no/SOSITE
 <p>Produktspesifikasjonen definerer <em>ikke</em> hva som defineres som et avvik og hvordan slik slik avvik kan avdekkes. Dette defineres i kravene som er satt til dataene i produktspesifikasjoner og/eller annet avtaleverk knyttet til geodataene, som f.eks. FKB produktspesifikasjoner og Geovekst-avtaler for kartlegging og FDV.</p>
 </div>
 <div class="paragraph">
-<p>De konkrete bruksområdene til produktspesifikasjonen er i første omgang knyttet til avvik på FKB-data og andre geodata omfattet av Norge digitalt samarbeidet. Se <a href="#trueformål">Formål</a> i kap. 3.8. Se <a href="#trueeksempler-på-bruk-av-bruk-av-spesifikasjonen">Eksempler på bruk av bruk av spesifikasjonen</a> i eget vedlegg.</p>
+<p>De konkrete bruksområdene til produktspesifikasjonen er i første omgang knyttet til avvik på FKB-data og andre geodata omfattet av Norge digitalt samarbeidet. Se <a href="#trueformål">Formål</a> i kap. 3.8. Se også <a href="#trueeksempler-på-bruk-av-bruk-av-spesifikasjonen">Eksempler på bruk av bruk av spesifikasjonen</a> i Vedlegg C.</p>
 </div>
 <div class="paragraph">
 <p>Denne produktspesifikasjonen er utarbeidet iht. SOSI produktspesifikasjoner – Krav og godkjenning 5.0 <a href="#SOSI-KRAV">[SOSI-KRAV]</a>. UML-modellen som ligger til grunn for innhold i diagrammene og dokumentasjon i kap. 5, følger reglene i SOSI Regler for UML-modellering, versjon 5.1 <a href="#SOSI-UML">[SOSI-UML]</a>. <a href="http://sosi.geonorge.no/veiledere/UML">Denne veilederen</a> gir hjelp til å lese UML-diagrammene.</p>
@@ -2290,9 +2290,6 @@ SOSI_navn: STEDFESTING<br></p></td>
 <li>
 <p><a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/Avvikkartdata.sch">Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil</a> (sch-fil)</p>
 </li>
-<li>
-<p><a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/eksempel/">Katalog med eksempelfiler</a></p>
-</li>
 </ul>
 </div>
 </div>
@@ -2837,9 +2834,9 @@ SOSI_navn: STEDFESTING<br></p></td>
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="figurer/fullstendighet_overskytende.png"><img src="figurer/fullstendighet_overskytende.png" alt="Viser overskytende Veranda."></a>
+<a class="image" href="figurer/fullstendighet_overskytende.png"><img src="figurer/fullstendighet_overskytende.png" alt="Viser overskytende data."></a>
 </div>
-<div class="title">Figur 4. Eksempel på koding ved overskytende Veranda</div>
+<div class="title">Figur 4. Eksempel på koding ved overskytende BeskrivendeHjelpelinjeAnlegg</div>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2864,6 +2861,12 @@ SOSI_navn: STEDFESTING<br></p></td>
 <a class="image" href="figurer/konsistenskontroll_bygningDyrkamark.png"><img src="figurer/konsistenskontroll_bygningDyrkamark.png" alt="Viser bygningspunkt på dyrka mark."></a>
 </div>
 <div class="title">Figur 7. Eksempel på avvik funnet i konsistenskontroll. Bygningspunkt på dyrka mark i AR5</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="trueeksempelfiler"><a class="anchor" href="#trueeksempelfiler"></a>Eksempelfiler</h3>
+<div class="paragraph">
+<p>Gå til <a href="https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/AvvikKartdata/1.0/Eksempel">katalog med eksempelfiler</a> for å se eksempelfiler på SOSI-format .</p>
 </div>
 <div style="page-break-after: always;"></div>
 <h2 id="truelisensvilkår" class="discrete">Lisensvilkår</h2>
@@ -2927,7 +2930,7 @@ av denne lisensen og ikke kan viderebrukes</p>
 <div id="footer">
 <div id="footer-text">
 Versjon 1.0<br>
-Last updated 2022-08-11 14:40:43 +0200
+Last updated 2022-08-22 12:58:00 +0200
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
