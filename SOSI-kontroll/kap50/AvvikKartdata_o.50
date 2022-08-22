@@ -1,15 +1,16 @@
-! *   AvvikKartdata   Objektdefinisjoner generert fra SOSI UML modell   30.06.2022 08:34:05   *!
+! *   AvvikKartdata   Objektdefinisjoner generert fra SOSI UML modell   10.08.2022 14:51:41   *!
 
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikFellesegenskaper
 ..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikFellesegenskaper)
-..EGENSKAP "avvikObjekttype" CharacterString "..AVVIK_OBJEKTTYPE" T 1 1  >< ()
+..EGENSKAP "avvikId" CharacterString "..AVVIKID" T255 0 1  >< ()
+..EGENSKAP "avvikObjekttype" CharacterString "..AVVIK_OBJEKTTYPE" T255 1 1  >< ()
+..EGENSKAP "datasett" CharacterString "..DATASETT" T255 1 1  >< ()
+..EGENSKAP "objektpeker" CharacterString "..OBJEKTPEKER" T255 0 1  >< ()
+..EGENSKAP "informasjon" CharacterString "..INFORMASJON" T255 0 1  >< ()
 ..EGENSKAP "link" URI "..LINK" T255 0 1  >< ()
-..EGENSKAP "datasett" CharacterString "..DATASETT" T 0 1  >< ()
-..EGENSKAP "objektpeker" CharacterString "..OBJEKTPEKER" T 0 1  >< ()
-..EGENSKAP "informasjon" CharacterString "..INFORMASJON" T 0 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN KontrollGeodatakvalitet
@@ -24,7 +25,7 @@
 ..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
 ..INKLUDER AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikGenerell)
-..EGENSKAP "avvikBeskrivelse" CharacterString "..AVVK_BESKRIVELSE" T 1 1  >< ()
+..EGENSKAP "avvikBeskrivelse" CharacterString "..AVVK_BESKRIVELSE" T255 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikKonsistenskontroller

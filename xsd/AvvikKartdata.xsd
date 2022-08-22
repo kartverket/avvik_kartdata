@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:app="http://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" elementFormDefault="qualified" targetNamespace="http://skjema.geonorge.no/SOSI/produktspesifikasjon/AvvikKartdata/1.0" version="1.0">
   <annotation>
-    <documentation>Datamodell for tilbakemelding på avvik i Kartdata. Omfatter både avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet og andre typer avvik i kartdata. Kan omfatte avvik internt i datasettet, avvik mellom kartdataene og terrenget eller avvik i forhold til et annet datasett. 
+    <documentation>Datamodell for tilbakemelding på avvik i kartdata. Omfatter både avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet og andre typer avvik i kartdata. Kan omfatte avvik internt i datasettet, avvik mellom kartdataene og terrenget eller avvik i forhold til et annet datasett. 
 Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjekter og i kommunikasjon om datakvalitet mellom ulike parter i et samarbeid - som f.eks. Geovekst.</documentation>
   </annotation>
   <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="http://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
@@ -67,24 +67,24 @@ Kurve-geometri benyttes der avviket er knyttet til et objekt med Kurve-geometri.
 Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.</documentation>
             </annotation>
           </element>
+          <element minOccurs="0" name="avvikId" type="string">
+            <annotation>
+              <documentation>Unik identifikasjon av avviket innenfor datasettet i form av et nummer e.l. Unik identifikasjon av det enkelte avvik vil gjøre det lettere å kommunisere om de enkelte avvikene og er spesielt nyttig der avvikene ikke knytter seg til unikt identifiserbare kartobjekter.</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVIKID</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
           <element name="avvikObjekttype" type="string">
             <annotation>
               <documentation>hvilken objekttype avviket gjelder. 
-For veglenke eller andre typer generelle objekttyper kan det i stedet for objekttype brukes "typeveg" (eller ev. annen egenskap som beskriver objektet).</documentation>
+For veglenke eller andre typer generelle objekttyper bør den klassifiserende egenskapen angis i tillegg til objekttypen. F.eks. "Veglenke - sti" eller "Veglenke - enkelBilveg".</documentation>
               <appinfo>
                 <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVIK_OBJEKTTYPE</taggedValue>
               </appinfo>
             </annotation>
           </element>
-          <element minOccurs="0" name="link" type="anyURI">
-            <annotation>
-              <documentation>Link til nettressurs med mer informasjon om avviket</documentation>
-              <appinfo>
-                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LINK</taggedValue>
-              </appinfo>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="datasett" type="string">
+          <element name="datasett" type="string">
             <annotation>
               <documentation>hvilket datasett avviket gjelder</documentation>
               <appinfo>
@@ -105,6 +105,14 @@ For veglenke eller andre typer generelle objekttyper kan det i stedet for objekt
               <documentation>ekstra beskrivende eller forklarende tekst til avviket</documentation>
               <appinfo>
                 <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">INFORMASJON</taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="link" type="anyURI">
+            <annotation>
+              <documentation>Link til nettressurs med mer informasjon om avviket</documentation>
+              <appinfo>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LINK</taggedValue>
               </appinfo>
             </annotation>
           </element>

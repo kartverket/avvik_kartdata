@@ -1,4 +1,4 @@
-! *   AvvikKartdata   Elementdefinisjoner generert fra SOSI UML modell   30.06.2022 08:34:05   *!
+! *   AvvikKartdata   Elementdefinisjoner generert fra SOSI UML modell   10.08.2022 14:51:41   *!
 
 
 ! AvvikFellesegenskaper
@@ -21,19 +21,22 @@
 ..OBJTYPE T32
 
 .DEF
-..AVVIK_OBJEKTTYPE T
+..AVVIKID T255
+
+.DEF
+..AVVIK_OBJEKTTYPE T255
+
+.DEF
+..DATASETT T255
+
+.DEF
+..OBJEKTPEKER T255
+
+.DEF
+..INFORMASJON T255
 
 .DEF
 ..LINK T255
-
-.DEF
-..DATASETT T
-
-.DEF
-..OBJEKTPEKER T
-
-.DEF
-..INFORMASJON T
 
 .DEF
 ..SIKKER_PÅVISNING BOOLSK
@@ -42,7 +45,7 @@
 ..AVVIKSHÅNDTERING T
 
 .DEF
-..AVVK_BESKRIVELSE T
+..AVVK_BESKRIVELSE T255
 
 .DEF
 ..KONSISTENSKONTROLL T
