@@ -1,0 +1,29 @@
+﻿.HODE
+..TEGNSETT UTF-8
+..SOSI-VERSJON 4.5
+..SOSI-NIVÅ 4
+..OMRÅDE
+...MIN-NØ 6693031.00 515776.00
+...MAX-NØ 6699918.00 534648.00
+..TRANSPAR
+...KOORDSYS 22
+...ORIGO-NØ 0  0
+...ENHET 0.01
+! Analyse utført: 2022-08-17 15:34:01
+.PUNKT 1
+..OBJTYPE AvvikKonsistenskontroll
+..KONSISTENSKONTROLL bygningVeg
+..INFORMASJON "Byggnr 159575500. Vegtype Veg. Bygningspunkt i fkb-bygning som ligger i vegflate i fkb-veg."
+..DATASETT FKB-Bygning
+..AVVIK_OBJEKTTYPE Bygning
+..OBJEKTPEKER 4e50bbf8-5bff-4035-8ad6-8b3b8601ae8f
+..NØ 669530400 53463800
+.PUNKT 2
+..OBJTYPE AvvikKonsistenskontroll
+..KONSISTENSKONTROLL bygningDyrkamark
+..INFORMASJON "Byggnr 159567788. Artype 21. Byggstat TB. Byggtyp_nbr 113. Bygningspunkt i fkb-bygning på fulldyrka mark i fkb-ar5."
+..DATASETT FKB-Bygning
+..AVVIK_OBJEKTTYPE Bygning
+..OBJEKTPEKER fc1c22a9-6c4e-470b-8953-295af0db5f03
+..NØ 669890900 52520200
+.SLUTT

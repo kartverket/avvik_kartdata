@@ -1,13 +1,14 @@
-:datasett: Avvik kartdata
+:datasett: AvvikKartdata
+:datasett-navn: Avvik kartdata
 :versjon: 1.0
 :publisert: 2022-08-15
 :skjema-versjon: 1.0
 
 // All informasjon i hode over denne linja må fylles ut for hvert datasett. Linjene under settes av de gitte variablene over og i adoc_parametere.adoc
 include::../felles/adoc_parametere.adoc[]
-= SOSI produktspesifikasjon: {datasett}
-Geovekst
-{versjon}, 2022-06-30
+= SOSI produktspesifikasjon: {datasett-navn}
+Kartverket
+{versjon}, 2022-08-15
 
 include::../felles/dokument_metadata.adoc[]
 
@@ -16,11 +17,13 @@ include::../felles/dokument_metadata.adoc[]
 
 === Innledning
 
-Produktspesifikasjon {datasett} {versjon} spesifiserer hvordan avvik på kartdata kan utveksles. Produktspesifikasjonen kan brukes til å utveksle informasjon om avvik mellom to forskjellige versjoner av samme datasett og mellom et bestemt kartdatasett og virkeligheten. Dette kan brukes både i forbindelse med kunde/leverandør-forhold i ulike typer kartleggingsprosjekter og i forbindelse med samarbeid om datakvalitet mellom ulike parter. 
+Produktspesifikasjon {datasett-navn} {versjon} spesifiserer hvordan avvik på kartdata skal utveksles. Produktspesifikasjonen brukes til å utveksle informasjon om avvik mellom to forskjellige versjoner av samme datasett, eller mellom et bestemt kartdatasett og virkeligheten. Dette kan brukes både i forbindelse med kunde/leverandør-forhold i ulike typer kartleggingsprosjekter og i forbindelse med samarbeid om datakvalitet mellom ulike parter.  
 
-Produktspesifikasjonen definerer en dokumentert og enhetlig måte å utveklse informasjom om slike avvik på. Produktspesifikasjonen baserer seg på krav til dataene er satt i henhold til rammeverket definert av standarden Geodatakvalitet <<G>>, men kan også brukes til å utveksle andre typer avvik. Produktspesifikasjonen definerer _ikke_ hva som defineres som et avvik og hvordan slik slik avvik kan avdekkes. Se <<Eksempler på koding av avvik etter denne produktspesifikasjonen>> i kapittel 12.1.
+Produktspesifikasjonen definerer en dokumentert og enhetlig måte å utveklse informasjom om slike avvik på. Produktspesifikasjonen baserer seg på krav til dataene er satt i henhold til rammeverket definert av standarden Geodatakvalitet <<G>>, men kan også brukes til å utveksle andre typer avvik. 
 
-De konkrete bruksområdene til produktspesifikasjonen er i første omgang knyttet til avvik på FKB-data og andre geodata omfattet av Norge digitalt samarbeidet. Se <<Formål>> i kap. 3.8
+Produktspesifikasjonen definerer _ikke_ hva som defineres som et avvik og hvordan slik slik avvik kan avdekkes. Dette defineres i kravene som er satt til dataene i produktspesifikasjoner og/eller annet avtaleverk knyttet til geodataene, som f.eks. FKB produktspesifikasjoner og Geovekst-avtaler for kartlegging og FDV. 
+
+De konkrete bruksområdene til produktspesifikasjonen er i første omgang knyttet til avvik på FKB-data og andre geodata omfattet av Norge digitalt samarbeidet. Se <<Formål>> i kap. 3.8. Se også <<Eksempler på bruk av bruk av spesifikasjonen>> i Vedlegg C.
 
 Denne produktspesifikasjonen er utarbeidet iht. SOSI produktspesifikasjoner – Krav og godkjenning 5.0 <<SOSI-KRAV>>. UML-modellen som ligger til grunn for innhold i diagrammene og dokumentasjon i kap. 5, følger reglene i SOSI Regler for UML-modellering, versjon 5.1 <<SOSI-UML>>. http://sosi.geonorge.no/veiledere/UML[Denne veilederen] gir hjelp til å lese UML-diagrammene.
 
@@ -52,7 +55,7 @@ http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkort
 == Generelt om spesifikasjonen
 
 === Unik identifisering
-{datasett}
+{datasett-navn}
 
 ==== Fullstendig navn
 Tilbakemelding på avvik i kartdata
@@ -204,7 +207,6 @@ GML-realiseringen følger kravene i "Realisering i GML-format 5.0" <<SOSI-GML>>.
 
 * link:{skjema-url}/Avvikkartdata.xsd[GML-skjema]
 * link:{skjema-url}/Avvikkartdata.sch[Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil] (sch-fil)
-* link:{skjema-url}/eksempel/[Katalog med eksempelfiler]
 
 [appendix]
 == SOSI-format-realisering
@@ -216,16 +218,34 @@ include::SOSI-realisering.adoc[]
 :sectnums!:
 
 [appendix]
-== Eksempler på SOSI-format-realisering
+== Eksempler på bruk av bruk av spesifikasjonen
+
+=== Eksempler på avvik funnet ved kontroll av FKB-data fra kartleggingsfirma
+
+Eksemplene viser avvik mellom terrenget (flybilder) og FKB-data
 
 .Eksempel på koding ved dokumentert manglende Mønelinje 
 image::figurer/fullstendighet_mangler.png[link=figurer/fullstendighet_mangler.png, alt="Viser manglende Mønelinje."]
 
-.Eksempel på koding ved overskytende Veranda 
-image::figurer/fullstendighet_overskytende.png[link=figurer/fullstendighet_overskytende.png, alt="Viser overskytende Veranda."]
+.Eksempel på koding ved overskytende BeskrivendeHjelpelinjeAnlegg 
+image::figurer/fullstendighet_overskytende.png[link=figurer/fullstendighet_overskytende.png, alt="Viser overskytende data."]
 
 .Eksempel på koding ved feiltolket objekttype. Stein er feiltolket som kumlokk 
 image::figurer/egenskapskvalitet_feilobjekt.png[link=figurer/egenskapskvalitet_feilobjekt.png, alt="Viser Stein feiltolket som Kumlokk."]
+
+=== Eksempler på avvik funnet ved konsistenskontroll av FKB-data
+
+Eksemplene viser manglende konsistens i kartdataene. Mellom kartobjekter i samme datasett, eller mellom datasett.
+
+.Eksempel på avvik funnet i konsistenskontroll. Takoverbygg inneholder bygningspunkt i FKB-Bygning
+image::figurer/konsistenskontroll_bygningTakoverbygg.png[link=figurer/konsistenskontroll_bygningTakoverbygg.png, alt="Viser Takoverbygg som inneholder bygningspunkt i FKB-Bygning."]
+
+.Eksempel på avvik funnet i konsistenskontroll. Bygningspunkt på dyrka mark i AR5
+image::figurer/konsistenskontroll_bygningDyrkamark.png[link=figurer/konsistenskontroll_bygningDyrkamark.png, alt="Viser bygningspunkt på dyrka mark."]
+
+=== Eksempelfiler
+
+Gå til link:{skjema-url}/Eksempel[katalog med eksempelfiler] for å se eksempelfiler på SOSI-format .
 
 
 <<<
