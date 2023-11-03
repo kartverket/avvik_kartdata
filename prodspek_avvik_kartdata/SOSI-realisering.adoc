@@ -35,7 +35,7 @@
 |CharacterString
 |..AVVIKID
 |[0..1]
-|255255
+|T255
  
 |avvikObjekttype
 |CharacterString
@@ -110,7 +110,7 @@
 |CharacterString
 |..AVVIKID
 |[0..1]
-|255255
+|T255
  
 |avvikObjekttype
 |CharacterString
@@ -185,7 +185,7 @@
 |CharacterString
 |..AVVIKID
 |[0..1]
-|255255
+|T255
  
 |avvikObjekttype
 |CharacterString
@@ -272,7 +272,7 @@
 |CharacterString
 |..AVVIKID
 |[0..1]
-|255255
+|T255
  
 |avvikObjekttype
 |CharacterString
@@ -359,7 +359,7 @@
 |CharacterString
 |..AVVIKID
 |[0..1]
-|255255
+|T255
  
 |avvikObjekttype
 |CharacterString
@@ -446,7 +446,7 @@
 |CharacterString
 |..AVVIKID
 |[0..1]
-|255255
+|T255
  
 |avvikObjekttype
 |CharacterString

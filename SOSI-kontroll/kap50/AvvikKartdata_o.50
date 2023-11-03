@@ -1,4 +1,4 @@
-! *   AvvikKartdata   Objektdefinisjoner generert fra SOSI UML modell   10.08.2022 14:51:41   *!
+! *   AvvikKartdata   Objektdefinisjoner generert fra SOSI UML modell   03.11.2023 13:10:07   *!
 
 
 .OBJEKTTYPE
@@ -10,54 +10,54 @@
 ..EGENSKAP "datasett" CharacterString "..DATASETT" T255 1 1  >< ()
 ..EGENSKAP "objektpeker" CharacterString "..OBJEKTPEKER" T255 0 1  >< ()
 ..EGENSKAP "informasjon" CharacterString "..INFORMASJON" T255 0 1  >< ()
-..EGENSKAP "link" URI "..LINK" T255 0 1  >< ()
+..EGENSKAP "link" URI "..LINK" FIX TYPE 0 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN KontrollGeodatakvalitet
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (KontrollGeodatakvalitet)
 ..EGENSKAP "sikkerPåvisning" Boolean "..SIKKER_PÅVISNING" BOOLSK 1 1  >< ()
-..EGENSKAP "avvikshåndtering" Avvikshåndtering "..AVVIKSHÅNDTERING" T 1 1  = (forvalter,leverandor,ingen)
+..EGENSKAP "avvikshåndtering" Avvikshåndtering "..AVVIKSHÅNDTERING" T 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikGenerell
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikGenerell)
-..EGENSKAP "avvikBeskrivelse" CharacterString "..AVVK_BESKRIVELSE" T255 1 1  >< ()
+..EGENSKAP "avvikBeskrivelse" CharacterString "..AVVIK_BESKRIVELSE" T255 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikKonsistenskontroller
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikKonsistenskontroller)
-..EGENSKAP "avvikstype" AvvikstypeKonsistenskontroller "..KONSISTENSKONTROLL" T 1 1  = (adresseVegnett,bygningspunktAnnenBygning,vegnettFlate,annen,annenBygningStor,bygningVann,bygningspunktBygning,vegMedium,traktorvegOverlapperVeg,bygningslinjerBygning,bygningVeg,vegnettVegref,bygningTiltak,bygningTakoverbygg,vegavgrensningVegnett)
+..EGENSKAP "avvikstype" AvvikstypeKonsistenskontroller "..KONSISTENSKONTROLL" T 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikFullstendighet
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER KontrollGeodatakvalitet AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikFullstendighet)
-..EGENSKAP "avvikstypeFullstendighet" AvvikstypeFullstendighet "..FULLSTENDIGHET" T 1 1  = (mangler,overskytende)
+..EGENSKAP "avvikstypeFullstendighet" AvvikstypeFullstendighet "..FULLSTENDIGHET" T 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikEgenskapskvalitet
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER KontrollGeodatakvalitet AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikEgenskapskvalitet)
-..EGENSKAP "avvikstypeEgenskapskvalitet" AvvikstypeEgenskapskvalitet "..EGENSKAPSKVALITET" T 1 1  = (avvikEgenskap,feilKlasse,feilObjekt)
+..EGENSKAP "avvikstypeEgenskapskvalitet" AvvikstypeEgenskapskvalitet "..EGENSKAPSKVALITET" T 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikLogiskKonsistens
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER KontrollGeodatakvalitet AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikLogiskKonsistens)
-..EGENSKAP "avvikstypeLogiskKonsistens" AvvikstypeLogiskKonsistens "..LOGISK_KONSISTENS" T 1 1  = (topologi,format,domene,konseptuelt)
+..EGENSKAP "avvikstypeLogiskKonsistens" AvvikstypeLogiskKonsistens "..LOGISK_KONSISTENS" T 1 1  >< ()
 
 .OBJEKTTYPE
 ..TYPENAVN AvvikStedfesting
-..GEOMETRITYPE PUNKT,KURVE,BUEP,KLOTOIDE,FLATE
+..GEOMETRITYPE OBJEKT
 ..INKLUDER KontrollGeodatakvalitet AvvikFellesegenskaper 
 ..EGENSKAP "" * "..OBJTYPE"    T32  1  1  = (AvvikStedfesting)
-..EGENSKAP "avvikstypeStedfesting" AvvikstypeStedfesting "..STEDFESTING" T 1 1  = (grovFeil)
+..EGENSKAP "avvikstypeStedfesting" AvvikstypeStedfesting "..STEDFESTING" T 1 1  >< ()

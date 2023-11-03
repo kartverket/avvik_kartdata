@@ -1,4 +1,4 @@
-! *   AvvikKartdata   Utvalgsdefinisjoner generert fra SOSI UML modell   10.08.2022 14:51:41   *!
+! *   AvvikKartdata   Utvalgsdefinisjoner generert fra SOSI UML modell   03.11.2023 13:10:07   *!
 
 .GRUPPE-UTVALG AvvikFellesegenskaper
 ..VELG "..OBJTYPE" = AvvikFellesegenskaper

@@ -132,7 +132,7 @@ Flate-geometri benyttes der avviket knyttes til et objekt med flate-geometri.
 |http://skjema.geonorge.no/SOSI/basistype/CharacterString[CharacterString]
 |Profilparametre i tagged values: 
 |
-SOSI_datatype: 255 + 
+SOSI_datatype: T + 
 SOSI_lengde: 255 + 
 SOSI_navn: AVVIKID + 
 |===
