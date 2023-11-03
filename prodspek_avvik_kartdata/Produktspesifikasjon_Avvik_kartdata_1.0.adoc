@@ -1,14 +1,14 @@
 :datasett: AvvikKartdata
 :datasett-navn: Avvik kartdata
 :versjon: 1.0
-:publisert: 2024-01-01
+:publisert: 2023-11-20
 :skjema-versjon: 1.0
 
 // All informasjon i hode over denne linja må fylles ut for hvert datasett. Linjene under settes av de gitte variablene over og i adoc_parametere.adoc
 include::../felles/adoc_parametere.adoc[]
 = SOSI produktspesifikasjon: {datasett-navn}
 Kartverket
-{versjon}, 2022-08-15
+{versjon}, 2024-01-01
 
 include::../felles/dokument_metadata.adoc[]
 

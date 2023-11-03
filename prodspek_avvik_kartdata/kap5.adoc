@@ -26,7 +26,7 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 |Tilbakemelding på avvik i kartdata
  
 |SOSI_modellstatus
-|utkast
+|gyldig
  
 |SOSI_spesifikasjonstype
 |produktspesifikasjon
