@@ -5,62 +5,73 @@
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
-[cols="20,20,20,10"]
+[cols="20,20,20,10,10"]
 |===
 |*Navn:* 
 |*Type:* 
 |*SOSI_navn:* 
 |*Mult.:* 
+|*SOSI-type:* 
  
 |posisjon
 |GM_Point
 |.PUNKT
 |[0..1]
+|
  
 |utstrekning
 |GM_Curve
 |.KURVE
 |[0..1]
+|
  
 |område
 |GM_Surface
 |.FLATE
 |[0..1]
+|
  
 |avvikId
 |CharacterString
 |..AVVIKID
 |[0..1]
+|255255
  
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
+|T255
  
 |datasett
 |CharacterString
 |..DATASETT
 |[1..1]
+|T255
  
 |objektpeker
 |CharacterString
 |..OBJEKTPEKER
 |[0..1]
+|T255
  
 |informasjon
 |CharacterString
 |..INFORMASJON
 |[0..1]
+|T255
  
 |link
 |URI
 |..LINK
 |[0..1]
+|T255
  
 |avvikBeskrivelse
 |CharacterString
-|..AVVK_BESKRIVELSE
+|..AVVIK_BESKRIVELSE
 |[1..1]
+|T255
  
 |===
  
@@ -69,62 +80,73 @@
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
-[cols="20,20,20,10"]
+[cols="20,20,20,10,10"]
 |===
 |*Navn:* 
 |*Type:* 
 |*SOSI_navn:* 
 |*Mult.:* 
+|*SOSI-type:* 
  
 |posisjon
 |GM_Point
 |.PUNKT
 |[0..1]
+|
  
 |utstrekning
 |GM_Curve
 |.KURVE
 |[0..1]
+|
  
 |område
 |GM_Surface
 |.FLATE
 |[0..1]
+|
  
 |avvikId
 |CharacterString
 |..AVVIKID
 |[0..1]
+|255255
  
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
+|T255
  
 |datasett
 |CharacterString
 |..DATASETT
 |[1..1]
+|T255
  
 |objektpeker
 |CharacterString
 |..OBJEKTPEKER
 |[0..1]
+|T255
  
 |informasjon
 |CharacterString
 |..INFORMASJON
 |[0..1]
+|T255
  
 |link
 |URI
 |..LINK
 |[0..1]
+|T255
  
 |avvikstype
 |«CodeList» AvvikstypeKonsistenskontroller
 |..KONSISTENSKONTROLL
 |[1..1]
+|T30
  
 |===
  
@@ -133,72 +155,85 @@
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
-[cols="20,20,20,10"]
+[cols="20,20,20,10,10"]
 |===
 |*Navn:* 
 |*Type:* 
 |*SOSI_navn:* 
 |*Mult.:* 
+|*SOSI-type:* 
  
 |posisjon
 |GM_Point
 |.PUNKT
 |[0..1]
+|
  
 |utstrekning
 |GM_Curve
 |.KURVE
 |[0..1]
+|
  
 |område
 |GM_Surface
 |.FLATE
 |[0..1]
+|
  
 |avvikId
 |CharacterString
 |..AVVIKID
 |[0..1]
+|255255
  
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
+|T255
  
 |datasett
 |CharacterString
 |..DATASETT
 |[1..1]
+|T255
  
 |objektpeker
 |CharacterString
 |..OBJEKTPEKER
 |[0..1]
+|T255
  
 |informasjon
 |CharacterString
 |..INFORMASJON
 |[0..1]
+|T255
  
 |link
 |URI
 |..LINK
 |[0..1]
+|T255
  
 |sikkerPåvisning
 |Boolean
 |..SIKKER_PÅVISNING
 |[1..1]
+|
  
 |avvikshåndtering
 |«CodeList» Avvikshåndtering
 |..AVVIKSHÅNDTERING
 |[1..1]
+|T30
  
 |avvikstypeFullstendighet
 |«CodeList» AvvikstypeFullstendighet
 |..FULLSTENDIGHET
 |[1..1]
+|T30
  
 |===
  
@@ -207,72 +242,85 @@
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
-[cols="20,20,20,10"]
+[cols="20,20,20,10,10"]
 |===
 |*Navn:* 
 |*Type:* 
 |*SOSI_navn:* 
 |*Mult.:* 
+|*SOSI-type:* 
  
 |posisjon
 |GM_Point
 |.PUNKT
 |[0..1]
+|
  
 |utstrekning
 |GM_Curve
 |.KURVE
 |[0..1]
+|
  
 |område
 |GM_Surface
 |.FLATE
 |[0..1]
+|
  
 |avvikId
 |CharacterString
 |..AVVIKID
 |[0..1]
+|255255
  
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
+|T255
  
 |datasett
 |CharacterString
 |..DATASETT
 |[1..1]
+|T255
  
 |objektpeker
 |CharacterString
 |..OBJEKTPEKER
 |[0..1]
+|T255
  
 |informasjon
 |CharacterString
 |..INFORMASJON
 |[0..1]
+|T255
  
 |link
 |URI
 |..LINK
 |[0..1]
+|T255
  
 |sikkerPåvisning
 |Boolean
 |..SIKKER_PÅVISNING
 |[1..1]
+|
  
 |avvikshåndtering
 |«CodeList» Avvikshåndtering
 |..AVVIKSHÅNDTERING
 |[1..1]
+|T30
  
 |avvikstypeEgenskapskvalitet
 |«CodeList» AvvikstypeEgenskapskvalitet
 |..EGENSKAPSKVALITET
 |[1..1]
+|T30
  
 |===
  
@@ -281,72 +329,85 @@
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
-[cols="20,20,20,10"]
+[cols="20,20,20,10,10"]
 |===
 |*Navn:* 
 |*Type:* 
 |*SOSI_navn:* 
 |*Mult.:* 
+|*SOSI-type:* 
  
 |posisjon
 |GM_Point
 |.PUNKT
 |[0..1]
+|
  
 |utstrekning
 |GM_Curve
 |.KURVE
 |[0..1]
+|
  
 |område
 |GM_Surface
 |.FLATE
 |[0..1]
+|
  
 |avvikId
 |CharacterString
 |..AVVIKID
 |[0..1]
+|255255
  
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
+|T255
  
 |datasett
 |CharacterString
 |..DATASETT
 |[1..1]
+|T255
  
 |objektpeker
 |CharacterString
 |..OBJEKTPEKER
 |[0..1]
+|T255
  
 |informasjon
 |CharacterString
 |..INFORMASJON
 |[0..1]
+|T255
  
 |link
 |URI
 |..LINK
 |[0..1]
+|T255
  
 |sikkerPåvisning
 |Boolean
 |..SIKKER_PÅVISNING
 |[1..1]
+|
  
 |avvikshåndtering
 |«CodeList» Avvikshåndtering
 |..AVVIKSHÅNDTERING
 |[1..1]
+|T30
  
 |avvikstypeLogiskKonsistens
 |«CodeList» AvvikstypeLogiskKonsistens
 |..LOGISK_KONSISTENS
 |[1..1]
+|T30
  
 |===
  
@@ -355,72 +416,85 @@
  
 [discrete]
 ===== Modellelementnavn og SOSI_navn
-[cols="20,20,20,10"]
+[cols="20,20,20,10,10"]
 |===
 |*Navn:* 
 |*Type:* 
 |*SOSI_navn:* 
 |*Mult.:* 
+|*SOSI-type:* 
  
 |posisjon
 |GM_Point
 |.PUNKT
 |[0..1]
+|
  
 |utstrekning
 |GM_Curve
 |.KURVE
 |[0..1]
+|
  
 |område
 |GM_Surface
 |.FLATE
 |[0..1]
+|
  
 |avvikId
 |CharacterString
 |..AVVIKID
 |[0..1]
+|255255
  
 |avvikObjekttype
 |CharacterString
 |..AVVIK_OBJEKTTYPE
 |[1..1]
+|T255
  
 |datasett
 |CharacterString
 |..DATASETT
 |[1..1]
+|T255
  
 |objektpeker
 |CharacterString
 |..OBJEKTPEKER
 |[0..1]
+|T255
  
 |informasjon
 |CharacterString
 |..INFORMASJON
 |[0..1]
+|T255
  
 |link
 |URI
 |..LINK
 |[0..1]
+|T255
  
 |sikkerPåvisning
 |Boolean
 |..SIKKER_PÅVISNING
 |[1..1]
+|
  
 |avvikshåndtering
 |«CodeList» Avvikshåndtering
 |..AVVIKSHÅNDTERING
 |[1..1]
+|T30
  
 |avvikstypeStedfesting
 |«CodeList» AvvikstypeStedfesting
 |..STEDFESTING
 |[1..1]
+|T30
  
 |===
 // End of SOSI-format

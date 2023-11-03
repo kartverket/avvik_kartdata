@@ -1,5 +1,5 @@
 // Start of UML-model
-=== Pakke: «ApplicationSchema» Avvik kartdata 1.0 - Utkast
+=== Pakke: «ApplicationSchema» Avvik kartdata 1.0
 *Definisjon:* Datamodell for tilbakemelding på avvik i kartdata. Omfatter både avvik funnet ved kontroll av kartdata i tråd med kvalitetsmodellen i standarden Geodatakvalitet og andre typer avvik i kartdata. Kan omfatte avvik internt i datasettet, avvik mellom kartdataene og terrenget eller avvik i forhold til et annet datasett. 
 Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjekter og i kommunikasjon om datakvalitet mellom ulike parter i et samarbeid - som f.eks. Geovekst.
  
@@ -54,12 +54,12 @@ Produktspesifkasjonen kan benyttes for utveksling av avvik i kartleggingsprosjek
 '''
  
 .Oversiktsdiagram 
-image::diagrammer/Oversiktsdiagram.png[link=diagrammer/Oversiktsdiagram.png, alt="Diagram med navn Oversiktsdiagram som viser UML-klasser beskrevet i teksten nedenfor."]
+image::diagrammer/Oversiktsdiagram.png[link=diagrammer/Oversiktsdiagram.png, Alt="Diagram med navn Oversiktsdiagram som viser UML-klasser beskrevet i teksten nedenfor."]
  
 '''
  
 .Hoveddiagram Avvik kartdata 
-image::diagrammer/Hoveddiagram Avvik kartdata.png[link=diagrammer/Hoveddiagram Avvik kartdata.png, alt="Diagram med navn Hoveddiagram Avvik kartdata som viser UML-klasser beskrevet i teksten nedenfor."]
+image::diagrammer/Hoveddiagram Avvik kartdata.png[link=diagrammer/Hoveddiagram Avvik kartdata.png, Alt="Diagram med navn Hoveddiagram Avvik kartdata som viser UML-klasser beskrevet i teksten nedenfor."]
  
 '''
  
@@ -241,7 +241,7 @@ SOSI_navn: LINK +
 |*skal ha en og kun en av geometriene PUNKT, KURVE eller FLATE*
  
 |Beskrivelse: 
-|inv: (self.område -&gt; size() + self.posisjon -&gt; size() + self.utstrekning -&gt; size() ) = 1
+|inv: (self.område  
  
 |===
  
@@ -342,7 +342,7 @@ Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret
 |
 SOSI_datatype: T + 
 SOSI_lengde: 255 + 
-SOSI_navn: AVVK_BESKRIVELSE + 
+SOSI_navn: AVVIK_BESKRIVELSE + 
 |===
  
 [discrete]
