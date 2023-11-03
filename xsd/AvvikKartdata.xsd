@@ -173,7 +173,7 @@ Dersom mulig bør en av de andre objekttypene som beskriver et avvik mer konkret
             <annotation>
               <documentation>Fritekst beskrivelse av type avvik. Kan i tillegg utfylles ved bruk av egenskapen informasjon.</documentation>
               <appinfo>
-                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVK_BESKRIVELSE</taggedValue>
+                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">AVVIK_BESKRIVELSE</taggedValue>
               </appinfo>
             </annotation>
           </element>
