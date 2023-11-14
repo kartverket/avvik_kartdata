@@ -36,7 +36,7 @@ Ta kontakt med Kartverket dersom du har innspill til produktspesifikasjonen elle
 
 === Endringslogg
 
-Ingen endringer
+Dette er første versjon av produktspesifikasjonen. Taggene på SOSI_navn for AVVIK_BESKRIVELSE og SOSI_datatype på AVVIKID er rettet/justert siden høringsversjon.
 
 === Normative referanser
 
