@@ -1,7 +1,7 @@
 :datasett: AvvikKartdata
 :datasett-navn: Avvik kartdata
 :versjon: 1.0
-:publisert: 2023-11-20
+:publisert: 2024-02-20
 :skjema-versjon: 1.0
 
 // All informasjon i hode over denne linja må fylles ut for hvert datasett. Linjene under settes av de gitte variablene over og i adoc_parametere.adoc
@@ -55,10 +55,10 @@ http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkort
 == Generelt om spesifikasjonen
 
 === Unik identifisering
-{datasett-navn}
+{datasett}
 
 ==== Fullstendig navn
-Tilbakemelding på avvik i kartdata
+{datasett-navn}
 
 ==== Versjon
 {versjon}

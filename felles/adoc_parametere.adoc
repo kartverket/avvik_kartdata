@@ -14,7 +14,7 @@
 :pdf-page-size: A4
 ifdef::backend-pdf[:toc: macro]
 :chapter-label! :
-:skjemabase-url: https://skjema.geonorge.no/SOSITEST/produktspesifikasjon/
+:skjemabase-url: https://skjema.geonorge.no/SOSI/produktspesifikasjon/
 // Kommentert ut i test :prodspekbase-url: https://sosi.geonorge.no/produktspesifikasjoner/
 :prodspekbase-url: {skjemabase-url}
 :umlbase-url: https://sosi.geonorge.no/uml-modeller/sosi-del-3-produktspesifikasjoner/
