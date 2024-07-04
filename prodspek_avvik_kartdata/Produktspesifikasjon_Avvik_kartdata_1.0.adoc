@@ -1,16 +1,23 @@
 :datasett: AvvikKartdata
 :datasett-navn: Avvik kartdata
 :versjon: 1.0
-:publisert: 2024-02-20
+:publisert: 2024-07-01
 :skjema-versjon: 1.0
 
 // All informasjon i hode over denne linja må fylles ut for hvert datasett. Linjene under settes av de gitte variablene over og i adoc_parametere.adoc
 include::../felles/adoc_parametere.adoc[]
 = SOSI produktspesifikasjon: {datasett-navn}
 Kartverket
-{versjon}, 2024-01-01
+{versjon}, 2024-07-01
 
-include::../felles/dokument_metadata.adoc[]
+****
+
+*Publisert*: {publisert} +
+*Faglig og formelt godkjent av*: Kartverket +
+
+****
+
+toc::[]
 
 
 == Innledning, historikk og endringslogg
@@ -40,14 +47,14 @@ Dette er første versjon av produktspesifikasjonen. Taggene på SOSI_navn for AV
 
 === Normative referanser
 
-include::kap1.4.adoc[]
+include::kap14_normativ_ref.adoc[]
 
 <<<
 
 == Definisjoner og forkortelser
 
 Produktspesifikasjonen baserer seg på definisjoner og forkortelser slik de er beskrevet i 
-http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkortelser[FKB generell del 5.0, kapittel 5]
+http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkortelser[FKB generell del 5.1, kapittel 5]
 
 
 <<<
@@ -64,7 +71,7 @@ http://sosi.geonorge.no/Standarder/FKB_generell_del/#truedefinisjoner-og-forkort
 {versjon}
 
 === Referansedato
-2022-06-30
+{publisert}
 
 === Ansvarlig organisasjon
 Kartverket
@@ -136,13 +143,13 @@ include::utstrekning.adoc[]
 === Omfang
 <<HeleDatasettet,Hele datasettet>>
 
-include::kap5.adoc[]
+include::modellRapport.adoc[]
 
 <<<
 
 == Referansesystem
 
-include::kap6.adoc[]
+include::kap6_referansesystem.adoc[]
 
 <<<
 
@@ -182,15 +189,13 @@ Ikke relevant
 
 == Leveranse
 
-include::kap11.adoc[]
+include::kap11_leveranse.adoc[]
 
 <<<
 
 == Tilleggsinformasjon
 
-=== Eksempler på koding av avvik etter denne produktspesifikasjonen
-
-
+Ikke angitt
 
 
 == Metadata
@@ -198,6 +203,13 @@ include::kap11.adoc[]
 Ikke relevant
 
 <<<
+
+[appendix]
+== SOSI-format-realisering
+
+SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <<SOSI-FORMAT>>. SOSI-kontroll definisjonsfiler finnes på link:{skjema-url}/SOSI-kontroll/[egen katalog]. Under en utlisting av SOSI-formatrealiseringen:
+
+include::SOSIformatRealisering.adoc[]
 
 
 [appendix]
@@ -207,13 +219,6 @@ GML-realiseringen følger kravene i "Realisering i GML-format 5.0" <<SOSI-GML>>.
 
 * link:{skjema-url}/Avvikkartdata.xsd[GML-skjema]
 * link:{skjema-url}/Avvikkartdata.sch[Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil] (sch-fil)
-
-[appendix]
-== SOSI-format-realisering
-
-SOSI-realiseringen følger kravene i "Realisering i SOSI-format 5.0" <<SOSI-FORMAT>>. SOSI-kontroll definisjonsfiler finnes på link:{skjema-url}/SOSI-kontroll/[egen katalog]. Under en utlisting av SOSI-formatrealiseringen:
-
-include::SOSI-realisering.adoc[]
 
 :sectnums!:
 
